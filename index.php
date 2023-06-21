@@ -35,7 +35,7 @@
         </form>
        </div>
        <div class="mt-3">
-        <i class="fa-sharp fa-solid fa-bars text-white fs-4 "onclick="openSidebar()"></i><span><i class="fa-solid fa-user text-info fs-4 mx-2 " onclick="opend()"></i></span>
+        <i class="fa-sharp fa-solid fa-bars text-white fs-4 "onclick="openSidebar()"></i><span>&nbsp;<i class="fa-solid fa-user text-info fs-4 mx-2 " onclick="opend()"></i></span>
        </div>
       </div>
     </div>
@@ -59,8 +59,8 @@
       <!-- user icon section -->
       <div id="mySlidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
-        <a href="#" class="fs-5">Sign In</a>
-        <a href="#"class="fs-5">Sign Up</a>
+        <a href="signin.php" class="fs-5">Sign In /Sign Up</a>
+        <!-- <a href="signin.html"class="fs-5">Sign Up</a> -->
         <a href="#"class="fs-5">Help Center</a>
 
       </div>
@@ -738,7 +738,7 @@
   <!-- Copyright -->
   <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.025);">
   © 2022-2023 Copyright:
-  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">GYAN.guru.com</a>
+  <a class="text-reset fw-bold" href="#">GYAN.guru.com</a>
   </div>
    <!-- Copyright -->
   </footer>

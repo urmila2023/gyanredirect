@@ -33,12 +33,9 @@ if (isset($_POST['admin_login'])) {
 
 	$email = $_POST['email'];
 	$pass = $_POST['pass'];
-	$res = mysqli_query($conn, "SELECT * FROM `admin` WHERE  email ='$email' AND pass = '$pass' ");
-    $re=mysqli_num_rows($res); 
-	if ($re == 1) {
-        $_SESSION['status'] = 'Success';
-        header('Location: signin.php');
-		// $_SESSION['login'] = 'Success';
+	$res = mysqli_query($conn, "SELECT * FROM `admin` WHERE  email = '$email' AND pass = '$pass' " );
+	if (mysqli_num_rows($res) ==1 ) {
+		$_SESSION['login'] = 'Success';
 		header('Location: index.php');
 	} else {
 		echo "<script>alert('Invalid Credential !')</script>";

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -29,21 +30,21 @@
        </div>
        <div class="mt-3 formsearch">
         <form class="d-flex">
-          <span class="text-info fw-bold">Search Anything</span>
+          <span class="searcha fw-bold">Search Anything</span>
           <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-info rounded-circle searchboxbtn" type="submit"><i class="fa-solid fa-search"></i></button>
         </form>
        </div>
        <div class="mt-3">
-        <i class="fa-sharp fa-solid fa-bars text-white fs-4 "onclick="openSidebar()"></i><span>&nbsp;<i class="fa-solid fa-user text-info fs-4 mx-2 " onclick="opend()"></i></span>
+        <i class="fa-sharp fa-solid slidicon fa-bars fs-4 "onclick="openSidebar()"></i><span>&nbsp;<i class="fa-solid slidicon fa-user fs-4 mx-2 " onclick="opend()"></i></span>
        </div>
       </div>
     </div>
     <img src="imgs/Circles (1).svg" width="305px" class="imgrescircle">
     <div class="text-end icondiv">
-    <i class="fa-brands fa-instagram text-info"></i>
-    <i class="fa-brands fa-twitter text-info"></i>
-    <i class="fa-brands fa-facebook text-info"></i>
+    <i class="fa-brands fa-instagram "></i>
+    <i class="fa-brands fa-twitter "></i>
+    <i class="fa-brands fa-facebook "></i>
     </div>
    
   </div>
@@ -60,6 +61,7 @@
       <div id="mySlidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
         <a href="signin.php" class="fs-5">Sign In /Sign Up</a>
+        <a href="logout1.php" class="fs-5">Logout</a>
         <!-- <a href="signin.html"class="fs-5">Sign Up</a> -->
         <a href="#"class="fs-5">Help Center</a>
 
@@ -79,24 +81,24 @@
       <div class="carousel-item active">
         <img src="./imgs/HeroImage (1).png" class="d-block w-100" alt="..."  height="400px">
         <div class="carousel-caption d-none d-md-block text-start">
-          <h5 class="fs-4">We <b class="empbold">empower</b> you <br>
+          <h5 class="fs-4 emph5">We <b class="empbold">empower</b> you <br>
             to learn what you love.</h5>
           <!-- <p>We empower you 
             to learn what you love.</p> -->
         </div>
       </div>
       <div class="carousel-item">
-        <img src="./imgs/Rectangle 28 (1).png" class="d-block w-100" alt="..."  height="400px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+        <img src="./imgs/Rectangle 28 (7).png" class="d-block w-100" alt="..."  height="400px">
+        <div class="carousel-caption d-none d-md-block text-start">
+        <h5 class="fs-4 emph5">We <b class="empbold">empower</b> you <br>
+            to learn what you love.</h5>
         </div>
       </div>
       <div class="carousel-item">
         <img src="./imgs/Rectangle 28 (2).png" class="d-block w-100" alt="..."  height="400px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+        <div class="carousel-caption d-none d-md-block text-start">
+        <h5 class="fs-4 emph5">We <b class="empbold">empower</b> you <br>
+            to learn what you love.</h5>
         </div>
       </div>
     </div>
@@ -109,8 +111,8 @@
       <span class="visually-hidden"></span>
     </button>
   </div>
-  <div class="bg-primary bottomcrousel">
-    <span>250,998 people are learning with us</span><span><button class="lmore">Learn More &rarr;</button></span>
+  <div class="bottomcrousel">
+    <span>250,998 people are learning with us</span><span><button class="lmore fw-bold">Learn More &rarr;</button></span>
   </div>
 </div>
 
@@ -122,15 +124,15 @@
       <nav aria-label="Page navigation example">
         <ul class="pagination page">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+            <a class="page-link colorchange" href="#" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+            <a class="page-link colorchange" href="#" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
@@ -139,12 +141,12 @@
     </span>
     <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Thumbnail.png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -155,12 +157,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28.png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -171,12 +173,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (1).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -187,12 +189,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (2).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -203,12 +205,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (3).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -219,12 +221,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (4).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -235,12 +237,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (7).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -251,12 +253,12 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card cardborder">
           <img src="./imgs/Rectangle 28 (5).png" class="card-img-top" alt="...">
           <div class="card-body">
             <button type="button" class="btn btn-primary position-relative bgi">
               GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge bg-primary">
+              <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -272,15 +274,15 @@
       <nav aria-label="Page navigation example">
       <ul class="pagination page page2 iid">
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
+          <a class="page-link colorchange" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+        <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+        <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
         <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
+          <a class="page-link colorchange" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
@@ -295,19 +297,19 @@
   <!-- /* EXPLORE EDUPRIX Start */ -->
   <div class="container-fluid explorecontainer">
     <span>
-      <h1 class="seaside pt-5 ms-5 exph1">&nbsp;EXPLORE EDUPRIX</h1>
+      <h1 class="seaside pt-5 ms-5">&nbsp;EXPLORE EDUPRIX</h1>
       <nav aria-label="Page navigation example">
         <ul class="pagination page">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+            <a class="page-link colorchange" href="#" aria-label="Previous">
               <span aria-hidden="true">&larr;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+            <a class="page-link colorchange" href="#" aria-label="Next">
               <span aria-hidden="true">&rarr;</span>
             </a>
           </li>
@@ -376,15 +378,15 @@
         <nav aria-label="Page navigation example">
         <ul class="pagination page page2 page3">
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
+            <a class="page-link colorchange" href="#" aria-label="Previous">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
           <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
+            <a class="page-link colorchange" href="#" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
             </a>
           </li>
@@ -393,7 +395,7 @@
     </div>
     </div>
     
-    <pre class="text-end sall pb-5 pe-5">See All</pre>
+    <!-- <pre class="text-end sall pb-5 pe-5 colorchange">See All</pre> -->
   </div>
   <!-- /* EXPLORE EDUPRIX End */ -->
 
@@ -409,16 +411,16 @@
           <div class="row">
             <div class="col-lg-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
               <img src="./imgs/Student Photo.png"
-                class=" img-fluid shadow-1" alt="woman avatar" width="200" height="200" />
+                class=" img-fluid shadow-1 imagesadhow" alt="woman avatar" width="200" height="200" />
             </div>
             <div class="col-lg-8">
                <div> 
-              <button  class="rounded-circle ">&larr;</button>
-                 <button  class="rounded-circle">&rarr;</button>
+              <button  class="rounded-circle arrowcolor">&larr;</button>
+                 <button  class="rounded-circle arrowcolor">&rarr;</button>
                </div>
-              <p class="fw-bold lead mb-2 mt-4"><strong>Emillie Jonas</strong></p>
-              <p class="fw-bold text-muted mb-0">England</p>
-              <p class="text-muted fw-light mt-3">
+              <p class="fw-bold lead mb-2 mt-4 emilliecolor"><strong>Emillie Jonas</strong></p>
+              <p class="fw-bold mb-0 englandcolor">England</p>
+              <p class=".footertext fw-light mt-3">
                 Eduprix is an ideal location for anybody who wants to learn something new or share what they know with others.
                 Eduprix is a worldwide platform for online learning that helps to connect with one another via knowledge. 
                 It comes highly recommended from my side. 
@@ -475,8 +477,8 @@
             <img src="./imgs/Rectangle 31.png"
               class="shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">John S.Sergent</h5>
-          <p class="px-xl-3">Head of Data Science </p>
+          <h5 class="mb-3 emilliecolor">John S.Sergent</h5>
+          <p class="px-xl-3 englandcolor">Head of Data Science </p>
         </div>
         <div class="col-md-3 mb-5 mb-md-0 meetres">
         
@@ -484,8 +486,8 @@
             <img src="./imgs/Rectangle 31 (1).png"
               class="shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">Albrecht Kachher</h5>
-          <p class="px-xl-3">Developer and Lead Instructor  </p>
+          <h5 class="mb-3 emilliecolor">Albrecht Kachher</h5>
+          <p class="px-xl-3 englandcolor">Developer and Lead Instructor  </p>
         </div>
         <div class="col-md-3 mb-5 mb-md-0 meetres">
         
@@ -493,8 +495,8 @@
             <img src="./imgs/Rectangle 31 (2).png"
               class="shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">Peter P.  Rubens</h5>
-          <p class="px-xl-3">Digital Marketing Expart</p>
+          <h5 class="mb-3 emilliecolor">Peter P.  Rubens</h5>
+          <p class="px-xl-3 englandcolor">Digital Marketing Expart</p>
         </div>
         <div class="col-md-3 mb-5 mb-md-0 meetres">
         
@@ -504,13 +506,13 @@
             
           </div>
           
-          <h5 class="mb-3">David A.Sequiros</h5>
-          <p class="px-xl-3">Engineering Architect</p>
+          <h5 class="mb-3 emilliecolor">David A.Sequiros</h5>
+          <p class="px-xl-3 englandcolor">Engineering Architect</p>
          
         </div>
         <div> 
-         <button  class="rounded-circle">&larr;</button>
-            <button  class="rounded-circle ">&rarr;</button>
+         <button  class="rounded-circle arrowcolor">&larr;</button>
+            <button  class="rounded-circle arrowcolor">&rarr;</button>
           </div>
       </div>
     </section>
@@ -528,8 +530,8 @@
             <button type="button" class="btn btn-primary blogbtn">
              Art
             </button>
-            <h5 class="card-title">The limits between art and craft</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">The limits between art and craft</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -540,8 +542,8 @@
             <button type="button" class="btn btn-primary blogbtn">
               Info. Tech
             </button>
-            <h5 class="card-title">8 guidelines for art lovers</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">8 guidelines for art lovers</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -552,8 +554,8 @@
             <button type="button" class="btn btn-primary blogbtn">
               Mathematics
             </button>
-            <h5 class="card-title">The Importance of Statistics</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">The Importance of Statistics</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -564,8 +566,8 @@
             <button type="button" class="btn btn-primary blogbtn">
               Design
             </button>
-            <h5 class="card-title">The Fundamentals of Color Theory</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">The Fundamentals of Color Theory</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -576,8 +578,8 @@
             <button type="button" class="btn btn-primary blogbtn">
              Art
             </button>
-            <h5 class="card-title">Excellent short tale writing tips</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">Excellent short tale writing tips</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -588,8 +590,8 @@
             <button type="button" class="btn btn-primary blogbtn">
               Education
             </button>
-            <h5 class="card-title">Make your Classroom a Community</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">Make your Classroom a Community</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -600,8 +602,8 @@
             <button type="button" class="btn btn-primary blogbtn">
              Art
             </button>
-            <h5 class="card-title">Five Turner chosen art collectives</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">Five Turner chosen art collectives</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -612,8 +614,8 @@
             <button type="button" class="btn btn-primary blogbtn">
              Art
             </button>
-            <h5 class="card-title">The artistic highlights of the week</h5>
-            <p class="card-text fulla">Full Article</p>
+            <h5 class="card-title emilliecolor">The artistic highlights of the week</h5>
+            <p class="card-text footertext">Full Article</p>
           </div>
         </div>
       </div>
@@ -621,13 +623,13 @@
   </div>
    <!-- /* Recent Blogpost End */ -->
 <!-- ----------------------- -->
-<div class="container-fluid unknown mt-5">
+<div class="container-fluid unknown mt-5 backgroundform">
   <div class="row">
     <div class="col-lg-6 col-sm-12 text-end p-5 imgform"><img src="./imgs/Illustration (1).png "  width="300px" height="385px"/></div>
     <div class="col-lg-6 col-sm-12 pt-5 textres">
       <div class="mt-5">
-        <h4 class="unknownh4 getreular">Get Regular <br> Updates from</h4>
-        <img src="./imgs/Logo (1).png" height="50px" width="200px" class="mt-2"/>
+        <h4 class="  emilliecolor">Get Regular <br> Updates from</h4>
+        <img src="./imgs/Logo (3).png" height="50px" width="200px" class="mt-2"/>
       </div>
      <div class="formcen">
       <form class="row g-3 mt-2 formres">
@@ -635,7 +637,7 @@
           <label>Subscribe to Newsletter</label>
           <label for="inputPassword2" class="visually-hidden ">Password</label>
           <input type="password" class="form-control mt-2 inputemail" id="inputPassword2" placeholder="Email">
-          <button type="submit" class="btn btn-primary subscribebtn mt-2">Subscribe</button>
+          <button type="submit" class="btn btn-primary subscribebtn mt-2">SUBSCRIBE</button>
         </div>
       </form>
      </div>
@@ -657,9 +659,9 @@
    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
   <!-- Content -->
   <h6 class="text-uppercase fw-bold mb-4 mt-5">
-  <img src="./imgs/Logo.2.png"width="57%">
+  <img src="./imgs/Logo (3).png" width="57%">
   </h6>
-  <p class="text-white">
+  <p class="footertext">
    We're a worldwide community for online learning and teaching 
    where anybody can acquire new skills and accomplish their 
   objectives by connecting with others. We are dedicated to 
@@ -675,19 +677,19 @@
    Eduprix
   </h6>
    <p class="text-info">
-  <a href="#!" class="text-reset ">About</a>
+  <a href="#!" class="colorchange ">About</a>
  </p>
   <p class="text-info">
-  <a href="#!" class="text-reset">Afilliate</a>
+  <a href="#!" class="colorchange ">Afilliate</a>
   </p>
   <p class="text-info">
- <a href="#!" class="text-reset">Open Eduprix</a>
+ <a href="#!" class="colorchange ">Open Eduprix</a>
   </p>
  <p class="text-info">
-  <a href="#!" class="text-reset">Career</a>
+  <a href="#!" class="colorchange ">Career</a>
  </p>
   <p class="text-info">
-  <a href="#!" class="text-reset">News</a>
+  <a href="#!" class="colorchange ">News</a>
  </p>
  </div>
    <!-- Grid column -->
@@ -700,19 +702,19 @@
 
 </h6>
  <p class="text-info">
- <a href="#!" class="text-reset ">About</a>
+ <a href="#!" class="colorchange  ">About</a>
   </p>
   <p class="text-info">
-   <a href="#!" class="text-reset">Afilliate</a>
+   <a href="#!" class="colorchange ">Afilliate</a>
   </p>
  <p class="text-info">
-  <a href="#!" class="text-reset">Open Eduprix</a>
+  <a href="#!" class="colorchange ">Open Eduprix</a>
  </p>
   <p class="text-info">
-<a href="#!" class="text-reset">Career</a>
+<a href="#!" class="colorchange ">Career</a>
   </p>
   <p class="text-info">
-  <a href="#!" class="text-reset">News</a>
+  <a href="#!" class="colorchange ">News</a>
 </p>
 </div>
   <!-- Grid column -->
@@ -720,13 +722,13 @@
  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-5 text-white">
  <!-- Links -->
    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
- <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-  <p>
- <i class="fas fa-envelope me-3 text-secondary"></i>
+ <p class="footertext"><i class="fas fa-home me-3 iconcolorfooter"></i> New York, NY 10012, US</p>
+  <p class="footertext">
+ <i class="fas fa-envelope me-3 iconcolorfooter"></i>
  info@gyan.guru.com
    </p>
-  <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-  <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+  <p class="footertext"><i class="fas fa-phone me-3 iconcolorfooter"></i> + 01 234 567 88</p>
+  <p class="footertext"><i class="fas fa-print me-3 iconcolorfooter"></i> + 01 234 567 89</p>
  </div>
  <!-- Grid column -->
  </div>

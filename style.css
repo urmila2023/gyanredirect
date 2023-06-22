@@ -1,7 +1,8 @@
 /* ----------------------- */
 /* header css */
 .bg {
-  background-color: #10203F;
+  background-color: #006565;
+  /* #02292C,#006565,#5C7F83,#917131,#99562D */
   height: 415px;
   position: relative;
 }
@@ -14,23 +15,31 @@
 }
 .searchboxbtn{
   margin-left: -13%;
+  background-color: #917131 !important;
+  border: 1px solid #917131 !important;
+}
+.slidicon{
+  color: #917131;
 }
 .icondiv{
   margin-right: 17%;
   margin-top: -10%;
-  color: rgba(34, 87, 191, 0.25);
+  color: #5C7F83;
  
+}
+.searcha{
+  color: #917131;
 }
 .countdiv{
   float: right;
-    background: rgba(34, 87, 191, 0.25);
+    background:  #02292C;
     width: 90px;
     height: 244px;
     margin-top: -131px;
     text-align: center;
     line-height: 219px;
     font-size: 40px;
-    color: #2257BF;
+    color: #5C7F83;
     z-index: 1;
     position: relative;
     
@@ -85,8 +94,15 @@
 }
 /* -------------------- */
 .footer {
-  background-color: #10203f;
+  background-color: #02292C;
 }
+.iconcolorfooter{
+  color: #bf925c;
+}
+.footertext{
+  color: #5C7F83;
+}
+/* --------------- */
 
 /* TOP COURSES Start */
 .seaside {
@@ -94,10 +110,18 @@
   font-size: 40px;
   font-weight: 600;
   font-family: tahoma;
-  -webkit-text-stroke: 1px rgb(94, 94, 182);
+  -webkit-text-stroke: 2px #006565;
   -webkit-text-fill-color: transparent;
 }
-
+.colorchange{
+  color: #99562D!important;
+}
+.cardborder{
+  border: none !important;
+  /* border-right: 1px solid #006565 !important;
+  border-bottom: 1px solid #006565 !important; */
+  box-shadow: -5px -5px 6px rgb(0, 101, 101, 0.8);
+}
 .page {
   float: right;
   margin-top: -43px;
@@ -106,15 +130,19 @@
 
 .bgi {
   background-color: white !important;
-  border: 1px solid black !important;
-  color: black !important;
+  border-right: 2px solid #02292C !important;
+  border-bottom: 2px solid #02292C !important;
+  color: #5C7F83!important;
   padding: 2px !important;
   margin-top: -30px;
   margin-left: -15px;
+  font-weight: bold !important;
+  box-shadow: 4px 5px 5px rgb(0, 101, 101, 0.5);
 }
 
 .badge {
   border-radius: 0px;
+  background-color: #917131;
 }
 .page2 {
   display: none !important;
@@ -124,7 +152,7 @@
 
 /* EXPLORE EDUPRIX Start */
 .explorecontainer {
-  background-color: #003294;
+  background-color: #5C7F83;
   margin-top: 90px;
 }
 
@@ -133,66 +161,88 @@
 }
 
 .exprow {
-  background-color: #2257bf;
+  background-color: #02292C;
 }
 
 .couresp {
-  color: #00b2ff;
+  color: #917131;
 }
 
 .ficon {
-  color: #00b2ff;
+  color: #917131;
 }
 
 .sall {
-  color: #00b2ff;
+  color:#917131;
 }
 
 /* EXPLORE EDUPRIX End */
-
+/* student------------- */
+.englandcolor{
+  color: #917131 !important;
+}
+.emilliecolor{
+  color:#02292C !important;
+}
+.arrowcolor{
+  border: 2px solid #02292C;
+  color: #02292C;
+}
+.imagesadhow{
+  box-shadow: -5px -5px rgb(0, 101, 101, 0.8);
+}
+/* student---------- */
 /* Blogpost Sart */
 .blogbtn {
-  background: rgba(0, 178, 255, 0.08) !important;
-  color: #00b2ff !important;
+  background: #917131 !important;
+  /* color: #917131!important; */
   border: none !important;
 }
 .fulla {
-  color: #2257bf;
+  color: #bf925c;
 }
 .blogshadow {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 .blogcard {
-  border: none;
+  border: 1px solid #02292C !important;
 }
 /* Blogpost End*/
 
 /* ---------------- */
 .unknown {
-  background: rgba(0, 178, 255, 0.08);
+  background: #5C7F83;
 }
 .mathunknown {
-  color: #003294;
+  color: #02292C;
   font-weight: 800;
 }
 .unknownh4 {
-  color: #2257bf;
+  color: #bf925c;
 }
 /* ----------- */
 /* ----------- */
 .subscribebtn {
+  color: #bf925c !important;
+  border: none !important;
   width: 299px;
+  background-color: #02292C !important;
 }
 .inputemail {
   width: 300px;
 }
+.backgroundform{
+  background-color: #5C7F83;
+}
 /* --------------- */
 /* -------------Crousel----------- */
+
 .bottomcrousel{
+  background-color: #006565;
   width: 71%;
   line-height: 27px;
   float: right;
-  color: #00B2FF;
+  color: #917131;
   padding-left: 17px;
   padding: 10px;
 }
@@ -203,7 +253,11 @@
   float:right;
   margin-right: 17px;
 }
+.emph5{
+  color: #006565;
+}
 .empbold{
+  color: #02292C;
   font-weight: 800;
 }
 /* -------------Crousel----------- */
@@ -251,9 +305,9 @@
   .subscribebtn {
     width: 269px !important;
   }
-  .exph1 {
+  /* .exph1 {
     margin-left: 0px !important;
-  }
+  } */
   .sall {
     display: none;
   }

@@ -117,7 +117,8 @@
 </div>
 
  <!-- -------------------------------------------- -->
-  <!-- TOP COURSES Start-->
+  <!-- TOP COURSES
+   Start-->
   <div class="container topcourse">
     <span>
       <div class="seaside mt-5 respontopcoures">TOP COURSES </div>
@@ -268,6 +269,7 @@
           </div>
         </div>
       </div>
+    
     </div>
     <br>
     <div>

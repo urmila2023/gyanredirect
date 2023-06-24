@@ -365,3 +365,53 @@
     margin-bottom: 30px;
   }
 }
+
+
+
+/* -------------------coursedetails */
+.coursetitleh1{
+  color: #02292C;
+}
+.colorancher{
+  color: #99562D !important;
+  font-weight: bold !important;
+}
+.navtabul{
+  border-bottom:1px solid #006565 !important;
+}
+.nav-tabs .nav-link.active{
+  background: #5C7F83 !important;
+  color: #02292C!important;
+  border-color: #006565 #006565#fff #006565 !important;
+}
+.nav-link.active:hover{
+  color: #02292C!important;
+  border-color: #006565 #006565#fff #006565 !important;
+}
+.imgresponsivediv{
+  padding-right: 0px!important;
+  padding-left: 0px !important;
+}
+.tableiconcolor{
+  color: #5C7F83 !important;
+}
+.reviewsicon{
+  color: #bf925c;
+}
+.reviewsword{
+  margin-left: 83px;
+  font-size: 15px;
+}
+/* ------------------sidebar */
+.btngetcourse{
+  background-color: #02292C!important;
+  color: #bf925c!important;
+  font-weight: bold !important;
+}
+.designdiv{
+  border-right: 1px solid #02292C;
+  border-bottom: 1px solid #02292C;
+  margin: 50px;
+}
+/* --------------sidebar */
+/* -------------------coursedetails */

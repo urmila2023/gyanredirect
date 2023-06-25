@@ -1,7 +1,19 @@
+<?php
 
+session_start();
+
+//Check if the user is already logged in
+if (!isset($_SESSION['email'])) {
+   
+    // Redirect the user to the home page or any other authorized page
+    // header("Location: sigin_up.php");
+    
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -60,10 +72,20 @@
       <!-- user icon section -->
       <div id="mySlidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
-        <a href="signin.php" class="fs-5">Sign In /Sign Up</a>
-        <a href="logout1.php" class="fs-5">Logout</a>
-        <!-- <a href="signin.html"class="fs-5">Sign Up</a> -->
-        <a href="#"class="fs-5">Help Center</a>
+        <a href="signin.php" <?php if (!isset($_SESSION['email'])) { echo "style='display:block'" ; } else  { echo "style='display:none'" ;} ?>class="fs-5">Sign In/sign up</a>
+        
+            <div <?php if (isset($_SESSION['email'])) { echo "style='display:block'" ; } else  { echo "style='display:none'" ;}?>  class="userpic">
+              <img src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg" width="40%"height="30%" class="rounded-circle mx-5">
+         
+         <img src="./imgs/camera.png
+         
+         " class=" cmr rounded-circle mx-5" width="12%"><span></span>
+         
+           <!-- <i class="fa-solid fa-pencil" id="ed"> -->
+             </div>
+          
+          <a href="#"<?php if(isset ($_SESSION['email']) ){ echo "style='display:block'" ; } else  { echo "style='display:none'" ;}?>class="fs-5">Dashboard</a>
+        <a href="logout1.php"<?php if (isset($_SESSION['email'])) { echo "style='display:block'" ; } else  { echo "style='display:none'" ;} ?>class="fs-5">Logout</a>
 
       </div>
 
@@ -141,22 +163,43 @@
       </nav>
     </span>
     <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+    <?php
+    include 'connection.php';
+    $query = "SELECT * FROM `subject`;";
+  
+  // FETCHING DATA FROM DATABASE
+  $result = $conn->query($query);
+  
+    if ($result->num_rows > 0) 
+    {
+        // OUTPUT DATA OF EACH ROW
+        while($row = $result->fetch_assoc())
+        {
+           
+    ?>
       <div class="col">
         <div class="card cardborder">
-          <img src="./imgs/Thumbnail.png" class="card-img-top" alt="...">
+          <img src=<?php echo $row['img']?> class="card-img-top" alt="...">
           <div class="card-body">
+            <a href="coursedetails.php ?id=<?php echo $row['id'];?>">
             <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
+              VIEW COURSE
               <span class="position-absolute top-100 start-100 translate-middle badge">
                 Free
                 <span class="visually-hidden">unread messages</span>
               </span>
             </button>
-            <h5 class="card-title">The Professional Art Masterclass</h5>
-            <p class="card-text">Michael Palmisano</p>
+            </a>
+            <h5 class="card-title"><?php echo $row['coursename']?></h5>
+            <p class="card-text"><?php echo $row['name']?></p>
           </div>
         </div>
       </div>
+
+      <?php 
+        }
+      }
+      ?>
       <div class="col">
         <div class="card cardborder">
           <img src="./imgs/Rectangle 28.png" class="card-img-top" alt="...">

@@ -4,7 +4,6 @@
   background-color: #006565;
   /* #02292C,#006565,#5C7F83,#917131,#99562D */
   height: 415px;
-  position: relative;
 }
 .imgrescircle{
   margin-top: 20px;
@@ -44,6 +43,7 @@
     position: relative;
     
 }
+/* slidebar */
 .sidebar {
   height: 100%;
   width: 0;
@@ -92,6 +92,10 @@
       font-size: 18px;
   }
 }
+/* -------------------- */
+/* --------------signin Start*/
+
+/* ------------------------signin End */
 /* -------------------- */
 .footer {
   background-color: #02292C;
@@ -415,3 +419,14 @@
 }
 /* --------------sidebar */
 /* -------------------coursedetails */
+/* ---------------sidebarenrolledcourse---------- */
+.designsidebar{
+  width: 15% !important;
+  background-color: #5C7F83 !important;
+  margin-top: 91px;
+}
+.clorchange{
+  color: #02292C!important;
+  text-decoration: none;
+}
+/* ---------------sidebarenrolledcourse---------- */

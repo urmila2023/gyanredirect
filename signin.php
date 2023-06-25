@@ -1,4 +1,14 @@
+<?php
 
+session_start();
+
+// Check if the user is already logged in
+if (isset($_SESSION['email'])) {
+    // Redirect the user to the home page or any other authorized page
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,37 +220,37 @@ form .btn input[type="submit"]{
           <div class="form-inner">
             <form action="backend.php" class="login" method="POST">
               <div class="field">
-                <input type="email" placeholder="Email Address" name="email" required>
+                <input type="email" placeholder="Email Address" name="email1" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Password" name="pass"required>
+                <input type="password" placeholder="Password" name="password1"required>
               </div>
               <div class="pass-link"><a href="#">Forgot password?</a></div>
               <div class="field btn">
                 <div class="btn-layer"></div>
-                <input type="submit" value="Login" name="admin_login">
+                <input type="submit" value="Login" name="submit">
               </div>
               <div class="signup-link">Not a member? <a href="">Signup now</a></div>
             </form>
             <form action="backend.php" class="signup" method="POST">
               <div class="field">
-                <input type="text" placeholder="First Name"name="fname" required>
+                <input type="text" placeholder="First Name"name="first" required>
               </div>
               <div class="field">
-                <input type="text" placeholder="Last Name" name="lname" required>
+                <input type="text" placeholder="Last Name" name="last" required>
               </div>
               <div class="field">
                 <input type="text" placeholder="Email Address" name="email" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Password" name="pass" required>
+                <input type="password" placeholder="Password" name="password" required>
               </div>
               <div class="field">
-                <input type="password" placeholder="Confirm password" name="cpass"required>
+                <input type="password" placeholder="Confirm password" name="confirm"required>
               </div>
               <div class="field btn">
                 <div class="btn-layer"></div>
-                <input type="submit" value="Signup" name="save_id">
+                <input type="submit" value="Signup" name="save">
               </div>
             </form>
           </div>

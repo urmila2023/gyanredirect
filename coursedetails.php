@@ -92,24 +92,31 @@
 </ul>
 
 <!-- Tab panes -->
+<?php
+   include 'connection.php';
+    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
+  
+  // FETCHING DATA FROM DATABASE
+  $result = $conn->query($query);
+  
+    if ($result->num_rows > 0) 
+    {
+        // OUTPUT DATA OF EACH ROW
+        while($row = $result->fetch_assoc())
+        {
+?>
 <div class="tab-content">
   <div class="tab-pane container imgresponsivediv active mt-5" id="msg">
-    <div><img src="./imgs/Rectangle 28 (2).png" width="100%" height="350px"/></div>
+    <div><img src=<?php echo $row['img']?> width="100%" height="350px"/></div>
     <div class="mt-5">
-        <h3>What is Lorem Ipsum?</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<p>
+        <h3><?php echo $row['coursename']?></h3>
+        <p><?php echo $row['description']?><p>
 
     </div>
+    
     <div>
+    <?php }}?>
+
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-5 text-center">
     <div class="col">
       <div class="p-1  bg-light">Reproduced</div>
@@ -147,11 +154,29 @@
   <div class="tab-pane container fade" id="pro">
   <h2 class="mt-5">Introduction</h2>
   <table class="table table-striped table-hover mt-3">
+  <?php
+   include 'connection.php';
+    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
+  
+  // FETCHING DATA FROM DATABASE
+  $result = $conn->query($query);
+  
+    if ($result->num_rows > 0) 
+    {
+        // OUTPUT DATA OF EACH ROW
+        while($row = $result->fetch_assoc())
+        {
+?>
    
   <tr>
       <td>
-      1. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
+        
+      <?php echo $row['curriclum']?>
+      </td>
     </tr>
+    <?php
+        }}
+    ?>
     <tr>
       <td>
       2. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
@@ -247,7 +272,7 @@
     <div class="col-lg-4">
         <div class="mt-5 mx-3 ">
 
-            <a><button type="button" class="btn btngetcourse btn-lg">Get Course</button></a>
+            <a href="enrolledcourse.php"><button type="button" class="btn btngetcourse btn-lg">Get Course</button></a>
             <p class="mt-5">Category : <b>Developement</b></p>
             <p class="mt-5 text-center">Enrolled Course : <b>2</b></p><hr>
             <p class="mt-5 text-center">Lectures : <b>2</b></p></i><hr>

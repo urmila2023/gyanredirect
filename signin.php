@@ -29,11 +29,9 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
-, #0073e6);
+  background-color: #006565;
 }
 ::selection{
-  background: #1a75ff;
   color: #fff;
 }
 .wrapper{
@@ -69,7 +67,7 @@ html,body{
 .slide-controls .slide{
   height: 100%;
   width: 100%;
-  color: #fff;
+    color: #bf925c;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -77,6 +75,7 @@ html,body{
   cursor: pointer;
   z-index: 1;
   transition: all 0.6s ease;
+
 }
 .slide-controls label.signup{
   color: #000;
@@ -88,8 +87,7 @@ html,body{
   left: 0;
   z-index: 0;
   border-radius: 15px;
-  background: -webkit-linear-gradient(left,#003366,#004080,#0059b3
-, #0073e6);
+  background: #02292C;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 input[type="radio"]{
@@ -99,7 +97,7 @@ input[type="radio"]{
   left: 50%;
 }
 #signup:checked ~ label.signup{
-  color: #fff;
+  color: #bf925c;
   cursor: default;
   user-select: none;
 }
@@ -182,7 +180,8 @@ form .btn .btn-layer{
   background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
 , #0073e6);
   border-radius: 15px;
-  transition: all 0.4s ease;;
+  transition: all 0.4s ease;
+  background-color: red !important;
 }
 form .btn:hover .btn-layer{
   left: 0;
@@ -194,13 +193,15 @@ form .btn input[type="submit"]{
   position: relative;
   background: none;
   border: none;
-  color: #fff;
+  color: #bf925c !important;
   padding-left: 0;
   border-radius: 15px;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  background: #02292C;
 }
+
 
 </style>
 <body>

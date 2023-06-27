@@ -111,7 +111,7 @@
                             while ($data = $result1->fetch_array()) {
                                 ?>
                         <li class="pure-menu-item">
-                         <a href="#" class="pure-menu-link clorchange ">
+                         <a href="" class="pure-menu-link clorchange ">
                       
                                     <?= $data['coursename'] ?>
                                 </a>
@@ -131,6 +131,7 @@
         </div>
 
         <div id="main">
+            
         <?php
 
                   $query2 = "SELECT * FROM `subject` ";
@@ -153,6 +154,7 @@
 
             </div>
             <?php }?>
+            
         </div>
     </div>
 

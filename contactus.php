@@ -67,236 +67,88 @@
       </div>
 
   <!-- header------------------- -->
-<!-- coursesection---------------- -->
-
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-    <div class="col-lg-8">
-    <h1 class="coursetitleh1 mt-5">THE PROFESSIONAL ART MASTERCLASS</h1>
-    <p class="mt-5">Teacher : <b>U.M.</b></p>
-<!-- Nav tabs -->
-<ul class="nav nav-tabs navtabul mt-5">
-  <li class="nav-item">
-    <a class="nav-link active colorancher" data-bs-toggle="tab" href="#msg">Drscription</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#pro">Curriculum</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#set">Annoucement</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#rev">Reviews</a>
-  </li>
-</ul>
-
-<!-- Tab panes -->
-<?php
-   include 'connection.php';
-    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
-  
-  // FETCHING DATA FROM DATABASE
-  $result = $conn->query($query);
-  
-    if ($result->num_rows > 0) 
-    {
-        // OUTPUT DATA OF EACH ROW
-        while($row = $result->fetch_assoc())
-        {
-?>
-<div class="tab-content">
-  <div class="tab-pane container imgresponsivediv active mt-5" id="msg">
-    <div><img src=<?php echo $row['img']?> width="100%" height="350px"/></div>
-    <div class="mt-5">
-        <h3><?php echo $row['coursename']?></h3>
-        <p><?php echo $row['description']?><p>
-
-    </div>
-    
-    <div>
-    <?php }}?>
-
-  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-5 text-center">
+<!-- contactus---------------- -->
+<div class="container mt-5">
+<div class="container  text-center">
+  <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
     <div class="col">
-      <div class="p-1  bg-light">Reproduced</div>
+      <div class="p-3 border bg-light">
+      <i class="fa fa-map-marker" aria-hidden="true"></i>
+      <h6>OUR MAIN OFFICE</h6>
+      <p>Indira Nagar Nvneet Bihar<br> Sector 17</p>
+      </div>
     </div>
     <div class="col">
-      <div class="p-1 bg-light">Reader</div>
+      <div class="p-3 border bg-light">
+      <i class="fa fa-phone" aria-hidden="true"></i>
+      <h6>PHONE NUMBER</h6>
+      <p>234-9876-5400<br>
+        888-0123-4567 (Toll Free)</p>
+      </div>
     </div>
     <div class="col">
-      <div class="p-1 bg-light">Lorem </div>
+      <div class="p-3 border bg-light">
+      <i class="fa fa-fax" aria-hidden="true"></i>
+      <h6>FAX</h6>
+      <p>1-234-567-8900<br>1-234-567-8900</p>
+      </div>
     </div>
     <div class="col">
-      <div class="p-1  bg-light">Ipsum</div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Popular</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Standard</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Chunk</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Setting</div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Profile </div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Reviws</div>
-    </div>
-  </div>
-  </div>
-    </div>
-  <div class="tab-pane container fade" id="pro">
-  <h2 class="mt-5">Introduction</h2>
-  <table class="table table-striped table-hover mt-3">
-  <?php
-   include 'connection.php';
-    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
-  
-  // FETCHING DATA FROM DATABASE
-  $result = $conn->query($query);
-  
-    if ($result->num_rows > 0) 
-    {
-        // OUTPUT DATA OF EACH ROW
-        while($row = $result->fetch_assoc())
-        {
-?>
-   
-  <tr>
-      <td>
-        
-      <?php echo $row['curriclum']?>
-      </td>
-    </tr>
-    <?php
-        }}
-    ?>
-    <tr>
-      <td>
-      2. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      3. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      4. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      5. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      6. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      7. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    </table>
-
-    <h2 class="mt-5">Editor</h2>
-  <table class="table table-striped table-hover mt-3">
-   
-  <tr>
-      <td>
-      1. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      2. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      3. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      4. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      5. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      6. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      7. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    </table>
-  </div>
-  
-  <div class="tab-pane container fade" id="set">
-
-    <div class="row">
-        <div class="col text-center mt-5"><img src="./imgs/announcement-vector-8753409.png" width="200px"/></div>
-        <div class="col text-center">
-        <h4 class="mt-5">IMPORTANT <br> ANNOUCEMENT</h4>
-        <h6 class="mt-5">Course Name : <b>Vision and Mission</b></h6>  
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-        <b>22/03/2023</b>
-    
-    </div>    
+      <div class="p-3 border bg-light">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <h6>EMAIL</h6>
+      <p>gyan.guru@gmail.com<br>
+        info@gmail.com
+     </p>
+      </div>
     </div>
    
   </div>
-  <div class="tab-pane container fade" id="rev">
-    <h2 class="mt-5">Reviews</h2>
-    <P> <b class="fs-1">5,2</b><span class="ms-3 reviewsicon">
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        </span> <br><span class="reviewsword">Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review.
-        Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a reviewBe the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review
-        </span>
-    </P>
-  </div>
- 
-    </div>
-    </div>
-    
-
-    <div class="col-lg-4">
-        <div class="mt-5 mx-3 ">
-
-            <a href="enrolledcourse.php"><button type="button" class="btn btngetcourse btn-lg">Get Course</button></a>
-            <p class="mt-5">Category : <b>Developement</b></p>
-            <p class="mt-5 text-center">Enrolled Course : <b>2</b></p><hr>
-            <p class="mt-5 text-center">Lectures : <b>2</b></p></i><hr>
-            <p class="mt-5 text-center">Levels : <b>Begginer</b></p><hr>
-            <div class="mt-5 designdiv"> <p class="mt-5 text-center m-4">: <b>Reviews</b><br> 
-            
-            <P>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            </span> <br><span class="reviewsword">Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review.
-            </span>
-            </P>
-        
-        </div>
-            
-        </div>
-    </div>
-    
-    </div>
-    
 </div>
-<!-- coursesection---------------- -->
+<h1 class="text-center">Contact From</h1>
+<div class=row>
+    <div class="col">
+    <form>
+  <div class="mb-3">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+  </div>
+  <div class="mb-3">
+    <input type="password" class="form-control fs-6" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
+  </div>
+  <div class="form-floating">
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Comments</label>
+    </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    I agree to the term and conditions privacy policy.
+  </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+    </form>
+    </div>
+    <div class="col">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.669432966492!2d80.99925417614809!3d26.882241761398163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be34af2e0d36f%3A0x13fc545254663b45!2sDo%20It%20For%20Me%20LLC!5e0!3m2!1sen!2sin!4v1687944925475!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<div class="row">
+<div class="col">
+    We hope this newsletter finds you well and filled with the excitement of learning and growth. We are delighted to share our latest updates and offerings in the realm of free education, aimed at empowering individuals like you to unlock their potential. Let's embark on this educational journey together!
+    </div>
+    <div class="col">
+        <p>Newsletter</p>
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+        </div>
+    </div>
+   
+</div>
+</div>
+
+
+<!-- contactus---------------- -->
 <!-- Footer -->
 <footer class="text-center text-lg-start text-muted footer">
    <!-- Section: Social media -->

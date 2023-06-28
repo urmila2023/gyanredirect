@@ -64,10 +64,9 @@ if (!isset($_SESSION['email'])) {
  
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-        <a href="#"class="fs-5">About</a>
-        <a href="#"class="fs-5">Services</a>
-        <a href="#"class="fs-5">Courses</a>
-        <a href="#"class="fs-5">Contact</a>
+        <a href="aboutus.php"class="fs-5">About</a>
+        <a href="allcourses.php"class="fs-5">Courses</a>
+        <a href="contactus.php"class="fs-5">Contact</a>
       </div>
       <!-- user icon section -->
       <div id="mySlidebar" class="sidebar">

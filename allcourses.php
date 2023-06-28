@@ -67,236 +67,202 @@
       </div>
 
   <!-- header------------------- -->
-<!-- coursesection---------------- -->
-
-<div class="container" style="margin-top: 10px;">
-    <div class="row">
-    <div class="col-lg-8">
-    <h1 class="coursetitleh1 mt-5">THE PROFESSIONAL ART MASTERCLASS</h1>
-    <p class="mt-5">Teacher : <b>U.M.</b></p>
-<!-- Nav tabs -->
-<ul class="nav nav-tabs navtabul mt-5">
-  <li class="nav-item">
-    <a class="nav-link active colorancher" data-bs-toggle="tab" href="#msg">Drscription</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#pro">Curriculum</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#set">Annoucement</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link colorancher" data-bs-toggle="tab" href="#rev">Reviews</a>
-  </li>
-</ul>
-
-<!-- Tab panes -->
-<?php
-   include 'connection.php';
-    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
-  
-  // FETCHING DATA FROM DATABASE
-  $result = $conn->query($query);
-  
-    if ($result->num_rows > 0) 
-    {
-        // OUTPUT DATA OF EACH ROW
-        while($row = $result->fetch_assoc())
-        {
-?>
-<div class="tab-content">
-  <div class="tab-pane container imgresponsivediv active mt-5" id="msg">
-    <div><img src=<?php echo $row['img']?> width="100%" height="350px"/></div>
-    <div class="mt-5">
-        <h3><?php echo $row['coursename']?></h3>
-        <p><?php echo $row['description']?><p>
-
-    </div>
-    
-    <div>
-    <?php }}?>
-
-  <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-5 text-center">
-    <div class="col">
-      <div class="p-1  bg-light">Reproduced</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Reader</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Lorem </div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Ipsum</div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Popular</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Standard</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Chunk</div>
-    </div>
-    <div class="col">
-      <div class="p-1 bg-light">Setting</div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Profile </div>
-    </div>
-    <div class="col">
-      <div class="p-1  bg-light">Reviws</div>
-    </div>
-  </div>
-  </div>
-    </div>
-  <div class="tab-pane container fade" id="pro">
-  <h2 class="mt-5">Introduction</h2>
-  <table class="table table-striped table-hover mt-3">
-  <?php
-   include 'connection.php';
-    $query = "SELECT * FROM `subject` WHERE id='".$_GET['id']."'";
-  
-  // FETCHING DATA FROM DATABASE
-  $result = $conn->query($query);
-  
-    if ($result->num_rows > 0) 
-    {
-        // OUTPUT DATA OF EACH ROW
-        while($row = $result->fetch_assoc())
-        {
-?>
-   
-  <tr>
-      <td>
-        
-      <?php echo $row['curriclum']?>
-      </td>
-    </tr>
+<!-- Allcourse---------------- -->
+<div class="container topcourse">
+    <span>
+      <div class="seaside mt-5 respontopcoures">All COURSES </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination page">
+          <li class="page-item">
+            <a class="page-link colorchange" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+          <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link colorchange" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </span>
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
     <?php
-        }}
-    ?>
-    <tr>
-      <td>
-      2. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      3. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      4. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      5. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      6. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      7. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    </table>
-
-    <h2 class="mt-5">Editor</h2>
-  <table class="table table-striped table-hover mt-3">
-   
-  <tr>
-      <td>
-      1. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      2. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      3. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      4. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      5. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      6. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    <tr>
-      <td>
-      7. &nbsp;  &nbsp;<i class="fas fa-envelope me-3 tableiconcolor"></i>  Vision and Mission.</td>
-    </tr>
-    </table>
-  </div>
+    include 'connection.php';
+    $query = "SELECT * FROM `subject`;";
   
-  <div class="tab-pane container fade" id="set">
-
-    <div class="row">
-        <div class="col text-center mt-5"><img src="./imgs/announcement-vector-8753409.png" width="200px"/></div>
-        <div class="col text-center">
-        <h4 class="mt-5">IMPORTANT <br> ANNOUCEMENT</h4>
-        <h6 class="mt-5">Course Name : <b>Vision and Mission</b></h6>  
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-        <b>22/03/2023</b>
-    
-    </div>    
-    </div>
-   
-  </div>
-  <div class="tab-pane container fade" id="rev">
-    <h2 class="mt-5">Reviews</h2>
-    <P> <b class="fs-1">5,2</b><span class="ms-3 reviewsicon">
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        </span> <br><span class="reviewsword">Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review.
-        Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a reviewBe the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review
-        </span>
-    </P>
-  </div>
- 
-    </div>
-    </div>
-    
-
-    <div class="col-lg-4">
-        <div class="mt-5 mx-3 ">
-
-            <a href="enrolledcourse.php"><button type="button" class="btn btngetcourse btn-lg">Get Course</button></a>
-            <p class="mt-5">Category : <b>Developement</b></p>
-            <p class="mt-5 text-center">Enrolled Course : <b>2</b></p><hr>
-            <p class="mt-5 text-center">Lectures : <b>2</b></p></i><hr>
-            <p class="mt-5 text-center">Levels : <b>Begginer</b></p><hr>
-            <div class="mt-5 designdiv"> <p class="mt-5 text-center m-4">: <b>Reviews</b><br> 
-            
-            <P>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            <i class="fa fa-star reviewsicon" aria-hidden="true"></i>
-            </span> <br><span class="reviewsword">Be the first to add a review Be the first to add a review Be the first to add a review Be the first to add a review.
-            </span>
-            </P>
-        
+  // FETCHING DATA FROM DATABASE
+  $result = $conn->query($query);
+  
+    if ($result->num_rows > 0) 
+    {
+        // OUTPUT DATA OF EACH ROW
+        while($row = $result->fetch_assoc())
+        {
+           
+    ?>
+      <div class="col">
+        <div class="card cardborder">
+          <img src=<?php echo $row['img']?> class="card-img-top" alt="...">
+          <div class="card-body">
+            <a href="coursedetails.php ?id=<?php echo $row['id'];?>">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              VIEW COURSE
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            </a>
+            <h5 class="card-title"><?php echo $row['coursename']?></h5>
+            <p class="card-text"><?php echo $row['name']?></p>
+          </div>
         </div>
-            
+      </div>
+
+      <?php 
+        }
+      }
+      ?>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">Premiere Pro CC for Beginners</h5>
+            <p class="card-text">William Carnahan</p>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (1).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">Electricity & Magnetism</h5>
+            <p class="card-text">Stephane Maarek</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (2).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">School chemistry beta</h5>
+            <p class="card-text">Rajeev Rawal</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (3).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">Modernism in Oriental Art</h5>
+            <p class="card-text">The Meseum of Modern Art</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (4).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">Compositions in Visual Art</h5>
+            <p class="card-text">Yan Cao Hong</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (7).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">High school physics</h5>
+            <p class="card-text">Prerak Gandhi</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card cardborder">
+          <img src="./imgs/Rectangle 28 (5).png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" class="btn btn-primary position-relative bgi">
+              GYAN GURU
+              <span class="position-absolute top-100 start-100 translate-middle badge">
+                Free
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <h5 class="card-title">Color Grading with Da Vinci</h5>
+            <p class="card-text">Matthew Falconer</p>
+          </div>
+        </div>
+      </div>
     
     </div>
-    
-</div>
-<!-- coursesection---------------- -->
+    <br>
+    <div>
+      <nav aria-label="Page navigation example">
+      <ul class="pagination page page2 iid">
+        <li class="page-item">
+          <a class="page-link colorchange" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link colorchange" href="#">1</a></li>
+        <li class="page-item"><a class="page-link colorchange" href="#">2</a></li>
+        <li class="page-item"><a class="page-link colorchange" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link colorchange" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+<!-- Allcourses---------------- -->
 <!-- Footer -->
 <footer class="text-center text-lg-start text-muted footer">
    <!-- Section: Social media -->

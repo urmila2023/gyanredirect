@@ -64,7 +64,6 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
         <a href="#" class="fs-5">About</a>
-        <a href="#" class="fs-5">Services</a>
         <a href="#" class="fs-5">Courses</a>
         <a href="#" class="fs-5">Contact</a>
     </div>
@@ -137,7 +136,7 @@
                   $query2 = "SELECT * FROM `subject` ";
 
                   $result2 = $conn->query($query2);
-               
+                  if ($result->num_rows > 0) {
                   while ($row2 = $result2->fetch_array()) {
                       ?>
             <div class="header mt-5">
@@ -153,7 +152,7 @@
                 </p>
 
             </div>
-            <?php }?>
+            <?php }}?>
             
         </div>
     </div>

@@ -1,4 +1,6 @@
-
+<?php 
+  include 'action/config.php';
+?>
 <!doctype html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap CSS -->
-  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -40,15 +42,10 @@
        </div>
       </div>
     </div>
-    <!-- <img src="imgs/Circles (1).svg" width="305px" class="imgrescircle"> -->
-    <!-- <div class="text-end icondiv">
-    <i class="fa-brands fa-instagram "></i>
-    <i class="fa-brands fa-twitter "></i>
-    <i class="fa-brands fa-facebook "></i>
-    </div> -->
+    
    
   </div>
-   <!-- <div class="countdiv"><b>03</b></div> -->
+  
  
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
@@ -91,11 +88,10 @@
     </span>
     <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
     <?php
-    include 'connection.php';
-    $query = "SELECT * FROM `subject`;";
+    $query = "SELECT * FROM `posts`;";
   
   // FETCHING DATA FROM DATABASE
-  $result = $conn->query($query);
+  $result = $con->query($query);
   
     if ($result->num_rows > 0) 
     {
@@ -106,7 +102,7 @@
     ?>
       <div class="col">
         <div class="card cardborder">
-          <img src=<?php echo $row['img']?> class="card-img-top" alt="...">
+          <img src='' class="card-img-top" alt="..."> 
           <div class="card-body">
             <a href="coursedetails.php ?id=<?php echo $row['id'];?>">
             <button type="button" class="btn btn-primary position-relative bgi">
@@ -117,8 +113,8 @@
               </span>
             </button>
             </a>
-            <h5 class="card-title"><?php echo $row['coursename']?></h5>
-            <p class="card-text"><?php echo $row['name']?></p>
+            <h5 class="card-title"><?php echo $row['title']?></h5>
+            <p class="card-text"><?php echo $row['desc']?></p>
           </div>
         </div>
       </div>
@@ -127,118 +123,12 @@
         }
       }
       ?>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">Premiere Pro CC for Beginners</h5>
-            <p class="card-text">William Carnahan</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (1).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">Electricity & Magnetism</h5>
-            <p class="card-text">Stephane Maarek</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (2).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">School chemistry beta</h5>
-            <p class="card-text">Rajeev Rawal</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (3).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">Modernism in Oriental Art</h5>
-            <p class="card-text">The Meseum of Modern Art</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (4).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">Compositions in Visual Art</h5>
-            <p class="card-text">Yan Cao Hong</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (7).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">High school physics</h5>
-            <p class="card-text">Prerak Gandhi</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card cardborder">
-          <img src="./imgs/Rectangle 28 (5).png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <button type="button" class="btn btn-primary position-relative bgi">
-              GYAN GURU
-              <span class="position-absolute top-100 start-100 translate-middle badge">
-                Free
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
-            <h5 class="card-title">Color Grading with Da Vinci</h5>
-            <p class="card-text">Matthew Falconer</p>
-          </div>
-        </div>
-      </div>
+     
+      
+    
+    
+     
+   
     
     </div>
     <br>

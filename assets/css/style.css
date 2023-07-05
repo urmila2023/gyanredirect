@@ -430,3 +430,22 @@
   text-decoration: none;
 }
 /* ---------------sidebarenrolledcourse---------- */
+/* ---------------question answer */
+.curi{
+  background-color: #80808033 !important;
+  margin-top: 20px;
+  padding: 10px;
+ 
+}
+.ancquestion{
+  text-decoration: none;
+  color: black;
+}
+.questioncuri {
+  margin-top: 10px;
+  padding: 5px;
+}
+.questioncuri:hover{
+  background-color: #80808033 !important;
+ 
+}

@@ -68,7 +68,8 @@ $id = $_GET['id'];
     <div class="container" style="margin-top: 10px;">
         <div class="row">
             <div class="col-lg-8">
-                <h1 class="coursetitleh1 mt-5">THE PROFESSIONAL ART MASTERCLASS</h1>
+           <?php $row = mysqli_fetch_array(mysqli_query($con,  "SELECT * FROM `posts` WHERE id= $id")); ?>
+                <h1 class="coursetitleh1 mt-5"><?php echo $row['title'] ?></h1>
                 <p class="mt-5">Teacher : <b>U.M.</b></p>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs navtabul mt-5">
@@ -116,20 +117,18 @@ $id = $_GET['id'];
                     <div class="tab-pane container fade" id="pro">
 
 
-
-
-
-
-                        <?php
-                        $cur = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id ");
+                     <?php
+                
+                       $cur = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id ");
                         while ($data2 = mysqli_fetch_array($cur)) { ?>
 
                             <div>
-                                <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>">
-                                    <?= $data2['question']; ?>
+                                <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
+                                   <p class="curi"><?= $data2['question']; ?></p>
                                 </a>
                             </div>
-                        <?php } ?>
+                        <?php  
+                    } ?> 
 
                     </div>
 

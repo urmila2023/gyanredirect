@@ -73,11 +73,11 @@ $id = $_GET['id'];
                     $res = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = '$id' ");
                     while($data = mysqli_fetch_array($res)){ ?>
 
-                        <li><a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data['id'] ?>"> <?= $data['question'] ?></a></li>
+                        <li class="questioncuri"><a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data['id'] ?>" class="ancquestion"> <?= $data['question'] ?> </a></li>
                    <?php } ?>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-9 mt-3">
                     <?php
                     if (isset($_GET['cid'])) {
                         $cid = $_GET['cid'];

@@ -30,7 +30,7 @@ include '../action/config.php';
 						<div class="auth-form-light text-left p-5">
 							<div class="brand-logo">
 								<a href="../">
-									<img src="../img/logo.png">
+									<img src="./assets/imgs/Logo (3).png">
 									<!-- <h2 style="color: #00BFFF;"><b><?= $shop['name'] ?></b></h2> -->
 								</a>
 							</div>

@@ -142,17 +142,20 @@ if (isset($_POST['add_post'])) {
 	$title = $_POST['title'];
 	$lebal = $_POST['lebal'];
 	$tags = $_POST['tags'];
-
 	$desc = $_POST['desc'];
-	$image = $_POST['image'];
+	$image = $_FILES['image'];
 	$curicullum =  $_POST['curicullum'];
 	$post_date = date('d M Y');
+	$file_name = $_FILES['image']['name'];
+	$file_size = $_FILES['image']['size'];
+	$file_tmp = $_FILES['image']['tmp_name'];
+	$file_type = $_FILES['image']['type'];
 
-
+	move_uploaded_file($file_tmp,"imgs/.$file_name");
 
 	$sql = "INSERT INTO `posts`(`cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, `curicullum`, `post_date`)
 	
-	 VALUES ('$cat_id','$title','$lebal','$tags','$desc','$image','$curicullum','$post_date')";
+	 VALUES ('$cat_id','$title','$lebal','$tags','$desc','$file_name','$curicullum','$post_date')";
 
 	$qry = mysqli_query($con, $sql) or die(mysqli_error($con));
 

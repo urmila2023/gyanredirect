@@ -42,7 +42,7 @@ include '../action/config.php';
 					<div class="card">
 						<div class="card-body">
 							<h5>Add <?= $page ?></h5>
-							<form method="post">
+							<form method="post" enctype="multipart/form-data">
 								<div class="row">
 
 
@@ -88,16 +88,16 @@ include '../action/config.php';
 											</select>
 										</div>
 										<div class="col-md-3 my-2">
-											<label>Tags <small>(sepreted by Comma)</small></label>
+											<label>Tags <small>(sepreted by Commas)</small></label>
 											<input type="text" name="tags" class="form-control" multiple size="50">
 										</div>
 									</div>
-									<div class="col-md-12 my-2">
+									<!-- <div class="col-md-12 my-2">
 										<div class="">
 											<label>Curicullum</label>
 											<textarea name="curicullum" class="form-control form-control-sm curi" type="text"></textarea>
 										</div>
-									</div>
+									</div> -->
 
 
 									<div class="col-md-12 my-2">

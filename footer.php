@@ -11,7 +11,7 @@
 					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 						<!-- Content -->
 						<h6 class="text-uppercase fw-bold mb-4 mt-5">
-							<img src="./imgs/Logo (3).png" width="57%">
+							<img src="./assets/imgs/Logo (3).png" width="57%">
 						</h6>
 						<p class="footertext">
 							We're a worldwide community for online learning and teaching

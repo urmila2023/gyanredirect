@@ -11,7 +11,7 @@
 					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
 						<!-- Content -->
 						<h6 class="text-uppercase fw-bold mb-4 mt-5">
-							<img src="./assets/imgs/Logo (3).png" width="57%">
+							<a href="#"><img src="./assets/imgs/Logo (3).png" width="57%"></a>
 						</h6>
 						<p class="footertext">
 							We're a worldwide community for online learning and teaching
@@ -29,19 +29,19 @@
 							Eduprix
 						</h6>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">About</a>
+							<a href="about.php" class="colorchange ">About</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Afilliate</a>
+							<a href="allcourses.php" class="colorchange ">Courses</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Open Eduprix</a>
+							<a href="contact.php" class="colorchange ">Contact</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Career</a>
+							<a href="#" class="colorchange ">Career</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">News</a>
+							<a href="#" class="colorchange ">News</a>
 						</p>
 					</div>
 					<!-- Grid column -->
@@ -54,19 +54,19 @@
 
 						</h6>
 						<p class="text-info">
-							<a href="#!" class="colorchange  ">About</a>
+							<a href="about.php" class="colorchange ">About</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Afilliate</a>
+							<a href="allcourses.php" class="colorchange ">Courses</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Open Eduprix</a>
+							<a href="contact.php" class="colorchange ">Contact</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">Career</a>
+							<a href="#" class="colorchange ">Career</a>
 						</p>
 						<p class="text-info">
-							<a href="#!" class="colorchange ">News</a>
+							<a href="#" class="colorchange ">News</a>
 						</p>
 					</div>
 					<!-- Grid column -->

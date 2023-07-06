@@ -36,7 +36,7 @@ if (!isset($_SESSION['email'])) {
 		<div class="container">
 			<div class="d-flex justify-content-between text-white">
 				<div class="mt-3">
-					<a class="navbar-brand" href="#"><img src="./assets/imgs/Logo (3).png" /></a>
+					<a class="navbar-brand" href="index.php"><img src="./assets/imgs/Logo (3).png" /></a>
 				</div>
 				<div class="mt-3 formsearch">
 					<form class="d-flex">
@@ -62,9 +62,9 @@ if (!isset($_SESSION['email'])) {
 
 	<div id="mySidebar" class="sidebar">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-		<a href="aboutus.php" class="fs-5">About</a>
+		<a href="about.php" class="fs-5">About</a>
 		<a href="allcourses.php" class="fs-5">Courses</a>
-		<a href="contactus.php" class="fs-5">Contact</a>
+		<a href="contact.php" class="fs-5">Contact</a>
 	</div>
 	<!-- user icon section -->
 	<div id="mySlidebar" class="sidebar">
@@ -190,7 +190,7 @@ if (!isset($_SESSION['email'])) {
 			?>
 					<div class="col">
 						<div class="card cardborder">
-							<img src=<?php echo $row['image'] ?> class="card-img-top" alt="...">
+							<img src="<?php echo './assets/imgs/' . $row['image']; ?>" class="card-img-top" alt="...">
 							<div class="card-body">
 								<a href="coursedetails.php?id=<?php echo $row['id']; ?>">
 									<button type="button" class="btn btn-primary position-relative bgi">

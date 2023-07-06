@@ -111,7 +111,7 @@ if (isset($_POST['submit'])) {
 		/*select and check condition*/
 		$query = "SELECT * FROM `signup` WHERE email = '$email' and `password`='$pass'";
 
-		$result = mysqli_query($conn, $query);
+		$result = mysqli_query($con, $query);
 		$row = mysqli_fetch_assoc($result);
 		if (mysqli_num_rows($result) == 1) {
 			$_SESSION['email'] = $_POST['email1'];
@@ -152,7 +152,7 @@ if (isset($_POST['add_post'])) {
 	$file_type = $_FILES['image']['type'];
 
 	move_uploaded_file($file_tmp,"imgs/.$file_name");
-
+	
 	$sql = "INSERT INTO `posts`(`cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, `curicullum`, `post_date`)
 	
 	 VALUES ('$cat_id','$title','$lebal','$tags','$desc','$file_name','$curicullum','$post_date')";

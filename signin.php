@@ -219,7 +219,7 @@ form .btn input[type="submit"]{
             <div class="slider-tab"></div>
           </div>
           <div class="form-inner">
-            <form action="backend.php" class="login" method="POST">
+            <form action="action/config.php" class="login" method="POST">
               <div class="field">
                 <input type="email" placeholder="Email Address" name="email1" required>
               </div>
@@ -233,7 +233,7 @@ form .btn input[type="submit"]{
               </div>
               <div class="signup-link">Not a member? <a href="">Signup now</a></div>
             </form>
-            <form action="backend.php" class="signup" method="POST">
+            <form action="action/config.php" class="signup" method="POST">
               <div class="field">
                 <input type="text" placeholder="First Name"name="first" required>
               </div>

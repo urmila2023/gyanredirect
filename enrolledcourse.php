@@ -30,11 +30,12 @@ $id = $_GET['id'];
 <body>
 <?php include 'header.php' ?>
 
-    <div style="padding-top:100px">
-        <div class="container">
+    <div>
+        <div class="container-fluid">
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-2" style="background-color: #8080804f;">
+                
                     <?php
                     $res = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = '$id' ");
                     while($data = mysqli_fetch_array($res)){ ?>
@@ -43,7 +44,7 @@ $id = $_GET['id'];
                    <?php } ?>
                 </div>
 
-                <div class="col-md-9 mt-3">
+                <div class="col-md-10 mt-3 p-5">
                     <?php
                     if (isset($_GET['cid'])) {
                         $cid = $_GET['cid'];
@@ -56,6 +57,7 @@ $id = $_GET['id'];
                     <?php  } ?>
 
                 </div>
+              
 
             </div>
 

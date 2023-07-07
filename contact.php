@@ -23,35 +23,35 @@
 <body>
 <?php include 'header.php' ?>
 <!-- contactus---------------- -->
-<div class="container mt-5">
+<div class="container-fluid mt-5 mb-5">
 <div class="container  text-center">
   <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
     <div class="col">
-      <div class="p-3 border bg-light">
-      <i class="fa fa-map-marker" aria-hidden="true"></i>
-      <h6>OUR MAIN OFFICE</h6>
-      <p>Indira Nagar Nvneet Bihar<br> Sector 17</p>
+      <div class="p-3 border bg-light designcontact">
+      <i class="fa fa-map-marker iconcolor" aria-hidden="true"></i>
+      <h6 class="hedingcolor">OUR MAIN OFFICE</h6>
+      <p>16 Navneet Vihar, Sector 9, Indira Nagar, Lucknow 226021</p>
       </div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">
-      <i class="fa fa-phone" aria-hidden="true"></i>
-      <h6>PHONE NUMBER</h6>
+      <div class="p-3 border bg-light designcontact">
+      <i class="fa fa-phone iconcolor" aria-hidden="true"></i>
+      <h6 class="hedingcolor">PHONE NUMBER</h6>
       <p>234-9876-5400<br>
         888-0123-4567 (Toll Free)</p>
       </div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">
-      <i class="fa fa-fax" aria-hidden="true"></i>
-      <h6>FAX</h6>
+      <div class="p-3 border bg-light designcontact">
+      <i class="fa fa-fax iconcolor" aria-hidden="true"></i>
+      <h6 class="hedingcolor">FAX</h6>
       <p>1-234-567-8900<br>1-234-567-8900</p>
       </div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">
-      <i class="fa fa-envelope" aria-hidden="true"></i>
-      <h6>EMAIL</h6>
+      <div class="p-3 border bg-light designcontact">
+      <i class="fa fa-envelope iconcolor" aria-hidden="true"></i>
+      <h6 class="hedingcolor">EMAIL</h6>
       <p>gyan.guru@gmail.com<br>
         info@gmail.com
      </p>
@@ -60,46 +60,47 @@
    
   </div>
 </div>
-<h1 class="text-center">Contact From</h1>
-<div class=row>
-    <div class="col">
+<h2 class="text-center mt-5">CONTACT US</h2>
+<div class="row mt-5">
+    <div class="col-md-8 col8design">
     <form>
-  <div class="mb-3">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+ <div class="row">
+ <div class="col mb-4">
+    <input type="email" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
   </div>
-  <div class="mb-3">
-    <input type="password" class="form-control fs-6" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
+  <div class="col mb-4">
+    <input type="password" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
   </div>
+ </div>
+ <div class="row">
+ <div class="col mb-4">
+    <input type="text" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Phone Number">
+  </div>
+ <div class="col mb-4">
+    <input type="text" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Subject">
+  </div>
+ </div>
   <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Comments</label>
     </div>
-  <div class="mb-3 form-check">
+  <div class="mb-4 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     I agree to the term and conditions privacy policy.
   </div>
   <div class="text-center">
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary subscribebtn mt-2 p-2">SUBMIT</button>
   </div>
     </form>
     </div>
-    <div class="col">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.669432966492!2d80.99925417614809!3d26.882241761398163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be34af2e0d36f%3A0x13fc545254663b45!2sDo%20It%20For%20Me%20LLC!5e0!3m2!1sen!2sin!4v1687944925475!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="col-md-4 col4degisn">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.669432966492!2d80.99925417614809!3d26.882241761398163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be34af2e0d36f%3A0x13fc545254663b45!2sDo%20It%20For%20Me%20LLC!5e0!3m2!1sen!2sin!4v1687944925475!5m2!1sen!2sin" width="500" height="400" style="border:1px solid gray;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
-<div class="row">
-<div class="col">
-    We hope this newsletter finds you well and filled with the excitement of learning and growth. We are delighted to share our latest updates and offerings in the realm of free education, aimed at empowering individuals like you to unlock their potential. Let's embark on this educational journey together!
-    </div>
-    <div class="col">
-        <p>Newsletter</p>
-        <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-        </div>
-    </div>
-   
-</div>
+
+
+
+
 </div>
 
 

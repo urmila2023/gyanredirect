@@ -32,7 +32,7 @@ if (!isset($_SESSION['email'])) {
 </head>
 <body>
 <?php include 'header.php' ?>
-  <div class="container-fluid backgr">
+  <div class="container-fluid backgr mb-5">
   <div class="container ">
   <div class="row gx-5">
     <div class="col mt-5">

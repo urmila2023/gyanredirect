@@ -1,6 +1,6 @@
 <?php include '../action/check-login.php';
 include '../action/config.php';
-// error_reporting(0);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

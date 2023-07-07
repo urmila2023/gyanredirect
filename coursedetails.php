@@ -54,7 +54,7 @@ $id = $_GET['id'];
                 $row = mysqli_fetch_array(mysqli_query($con,  "SELECT * FROM `posts` WHERE id= $id")); ?>
                 <div class="tab-content">
                     <div class="tab-pane container imgresponsivediv active mt-5" id="msg">
-                        <div><img src=<?php echo $row['image'] ?> width="100%" height="350px" /></div>
+                        <div><img src=<?php echo 'assets/imgs/' . $row['image']; ?> width="100%" height="350px" /></div>
                         <div class="mt-5">
                             <h3><?php echo $row['title'] ?></h3>
                             <p><?php echo $row['desc'] ?></p>
@@ -62,7 +62,7 @@ $id = $_GET['id'];
                         </div>
 
                         <div>
-                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-5 text-center">
+                            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-5 mb-5 text-center">
                                 <?php
                                 $data1 =   explode(',', "$row[tags]");
                                 foreach ($data1 as $value) { ?>
@@ -78,9 +78,11 @@ $id = $_GET['id'];
 
 
                      <?php
-                
-                       $cur = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id ");
+                       
+                       $cur = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id ");?>
+                       <h5 class="mt-5">INTRODUCTION</h5><?php
                         while ($data2 = mysqli_fetch_array($cur)) { ?>
+                        
 
                             <div>
                                 <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
@@ -95,7 +97,7 @@ $id = $_GET['id'];
                     <div class="tab-pane container fade" id="set">
 
                         <div class="row">
-                            <div class="col text-center mt-5"><img src="./imgs/announcement-vector-8753409.png" width="200px" /></div>
+                            <div class="col text-center mt-5"><img src="./assets/imgs/announcement-vector-8753409.png" width="200px" /></div>
                             <div class="col text-center">
                                 <h4 class="mt-5">IMPORTANT <br> ANNOUCEMENT</h4>
                                 <h6 class="mt-5">Course Name : <b>Vision and Mission</b></h6>

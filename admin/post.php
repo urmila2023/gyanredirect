@@ -42,7 +42,7 @@ include '../action/config.php';
 					<div class="card">
 						<div class="card-body">
 							<h5>Add <?= $page ?></h5>
-							<form method="post" enctype="multipart/form-data">
+							<form method="post" enctype="multipart/form-data" action="../action/config.php">
 								<div class="row">
 
 

@@ -1,5 +1,5 @@
 <?php
-// error_reporting(0);
+error_reporting(0);
 include 'db_connect.php';
 
 date_default_timezone_set("Asia/Kolkata");
@@ -143,19 +143,17 @@ if (isset($_POST['add_post'])) {
 	$lebal = $_POST['lebal'];
 	$tags = $_POST['tags'];
 	$desc = $_POST['desc'];
-	$image = $_FILES['image'];
-	$curicullum =  $_POST['curicullum'];
 	$post_date = date('d M Y');
 	$file_name = $_FILES['image']['name'];
 	$file_size = $_FILES['image']['size'];
 	$file_tmp = $_FILES['image']['tmp_name'];
 	$file_type = $_FILES['image']['type'];
 
-	move_uploaded_file($file_tmp,"imgs/.$file_name");
+	move_uploaded_file($_FILES['image']['tmp_name'], "../assets/imgs/".$file_name);
 	
-	$sql = "INSERT INTO `posts`(`cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, `curicullum`, `post_date`)
+	$sql = "INSERT INTO `posts`(`cat_id`, `title`, `lebal`, `tags`, `desc`, `image` ,`post_date`)
 	
-	 VALUES ('$cat_id','$title','$lebal','$tags','$desc','$file_name','$curicullum','$post_date')";
+	 VALUES ('$cat_id','$title','$lebal','$tags','$desc','$file_name','$post_date')";
 
 	$qry = mysqli_query($con, $sql) or die(mysqli_error($con));
 

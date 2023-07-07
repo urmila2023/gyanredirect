@@ -433,7 +433,7 @@
 /* ---------------question answer */
 .curi{
   background-color: #80808033 !important;
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px;
  
 }
@@ -466,7 +466,7 @@ border-radius:10px;
 box-shadow: 10px 10px 8px #888888;
 }
 .backimgs1{
-  background-image: url('https://c0.wallpaperflare.com/preview/167/162/480/dark-studying-study-school-thumbnail.jpg');
+  background-image:  url('https://static.vecteezy.com/system/resources/thumbnails/010/355/020/small_2x/layers-of-abstract-3d-background-overlapping-silver-glitter-with-realistic-dark-brick-wall-free-vector.jpg');
 background-repeat: no-repeat;
   background-size: cover;
 text-shadow:2px 2px 4px #000;
@@ -483,4 +483,31 @@ border:2px solid black;
 border-radius:10px;
 box-shadow: 10px 10px 8px #888888;
 padding-bottom:73px;
+}
+/* designcontact---------------------- */
+.designcontact{
+  box-shadow: 0px 0px 8px 5px #dee2e6;
+  border-radius: 10px;
+}
+.iconcolor{
+ color: #99562D;
+}.hedingcolor{
+  color: #006565;
+}
+.inputcontact{
+  border: none !important;
+  border-bottom: 3px solid black !important;
+  padding: 13px !important;
+}
+.col4degisn{
+  text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #888888;
+}
+.col8design{
+  padding-top: 30px !important;
+  padding-left: 120px !important;
+  padding-right: 120px !important;
+  background-color: #5C7F83;
 }

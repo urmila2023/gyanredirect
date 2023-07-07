@@ -62,7 +62,7 @@
     ?>
       <div class="col">
         <div class="card cardborder">
-          <img src='' class="card-img-top" alt="..."> 
+          <img src='<?php echo 'assets/imgs/' . $row['image']; ?>' class="card-img-top" alt="..."> 
           <div class="card-body">
             <a href="coursedetails.php ?id=<?php echo $row['id'];?>">
             <button type="button" class="btn btn-primary position-relative bgi">
@@ -74,7 +74,7 @@
             </button>
             </a>
             <h5 class="card-title"><?php echo $row['title']?></h5>
-            <p class="card-text"><?php echo $row['desc']?></p>
+            <!-- <p class="card-text"><?php echo $row['desc']?></p> -->
           </div>
         </div>
       </div>

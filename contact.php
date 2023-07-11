@@ -75,35 +75,35 @@ if (!isset($_SESSION['email'])) {
 <h2 class="text-center mt-5">CONTACT US</h2>
 <div class="row mt-5">
     <div class="col-md-8 col8design">
-    <form>
- <div class="row">
- <div class="col mb-4">
-    <input type="text" class="form-control inputcontact"   id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
-  </div>
-  <div class="col mb-4">
-    <input type="email" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
-  </div>
- </div>
- <div class="row">
- <div class="col mb-4">
-    <input type="text" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Phone Number">
-  </div>
- <div class="col mb-4">
-    <input type="text" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Subject">
-  </div>
- </div>
-  <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-  <label for="floatingTextarea2">Comments</label>
+    <form action="action/config.php" method="post">
+  <div class="row">
+    <div class="col mb-4">
+      <input type="text" name="name" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
     </div>
+    <div class="col mb-4">
+      <input type="email" name="email" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-4">
+      <input type="text" name="phone" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Phone Number">
+    </div>
+    <div class="col mb-4">
+      <input type="text" name="subject" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Subject">
+    </div>
+  </div>
+  <div class="form-floating">
+    <textarea name="comments" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Comments</label>
+  </div>
   <div class="mb-4 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    I agree to the term and conditions privacy policy.
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+    I agree to the terms and conditions and privacy policy.
   </div>
   <div class="text-center">
-  <button type="submit" class="btn btn-primary subscribebtn mt-2 p-2">SUBMIT</button>
+    <button type="submit" class="btn btn-primary subscribebtn mt-2 p-2">SUBMIT</button>
   </div>
-    </form>
+</form>
     </div>
     <div class="col-md-4 col4degisn">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.669432966492!2d80.99925417614809!3d26.882241761398163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be34af2e0d36f%3A0x13fc545254663b45!2sDo%20It%20For%20Me%20LLC!5e0!3m2!1sen!2sin!4v1687944925475!5m2!1sen!2sin" width="500" height="400" style="border:1px solid gray;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -66,10 +66,10 @@
     <form>
  <div class="row">
  <div class="col mb-4">
-    <input type="email" class="form-control inputcontact" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
+    <input type="text" class="form-control inputcontact"   id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name">
   </div>
   <div class="col mb-4">
-    <input type="password" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
+    <input type="email" class="form-control inputcontact" id="exampleInputPassword1" placeholder="Enter Your Valid Email Address">
   </div>
  </div>
  <div class="row">

@@ -97,6 +97,9 @@
 
 /* ------------------------signin End */
 /* -------------------- */
+.f{
+  height: 100vh !important;
+}
 .footer {
   background-color: #02292C;
 }

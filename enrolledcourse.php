@@ -32,7 +32,7 @@ $id = $_GET['id'];
 
     <div>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row f">
 
                 <div class="col-md-2" style="background-color: #8080804f;">
                 

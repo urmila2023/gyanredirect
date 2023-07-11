@@ -10,37 +10,10 @@ $page = ucwords(pathinfo(str_replace('-', ' ', $_SERVER['PHP_SELF']), PATHINFO_F
 $path = '../img/post/'; //Admin Side
 $path2 = './img/post/';  // User Side
 
-// $domain1 = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; //Get full domain name
-// function getDomain($url)
-// {
-// 	$pieces = parse_url($url);
-// 	$domain2 = isset($pieces['host']) ? $pieces['host'] : '';
-// 	if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain2, $regs)) {
-// 		return $regs['domain'];
-// 	}
-// 	return FALSE;
-// }
-// $domain = getDomain($domain1);  // Get only domain name without wwww
+
 
 //=============================== Admin login ==============================================
-// if (isset($_POST['admin_login'])) {
-// 	$username = mysqli_real_escape_string($con, $_POST['username']);
-// 	$password = mysqli_real_escape_string($con, $_POST['password']);
 
-// 	$query = "SELECT * FROM admin WHERE username='$username' AND password='$password' ";
-// 	$results = mysqli_query($con, $query);
-// 	$r = mysqli_fetch_assoc($results);
-// 	if (mysqli_num_rows($results) == 1) {
-
-// 		$_SESSION['username'] = $r['username'];
-
-// 		echo ' <script>
-// 			alert("Login Success...\nWelcome to ' . $comp_name . ' ");
-// 			window.location.href="./dashboard.php"; </script> ';
-// 	} else {
-// 		echo ' <script>alert("Invalid Credential"); window.location.href="";</script> ';
-// 	}
-// }
 if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($con, $_POST['email1']);
     $password = mysqli_real_escape_string($con, $_POST['password1']);
@@ -52,8 +25,6 @@ if (isset($_POST['submit'])) {
         $r =mysqli_fetch_assoc($results);
         $_SESSION['email']=$r['username'];
 
-        // $_SESSION['username'] == 'aftab@gmail.com';
-
         echo ' <script>
             alert("Login Success...\nWelcome to ' . $comp_name . ' ");
             window.location.href="../index.php"; </script> ';
@@ -61,14 +32,6 @@ if (isset($_POST['submit'])) {
         echo ' <script>alert("Invalid Credential"); window.location.href="";</script> ';
     }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -122,86 +85,7 @@ if ($showAlert2) {
 }
 
 
-// $showAlert1 = false;
-// $showAlert2 = false;
-// $showAlert = false;
-// if (isset($_POST['save'])) {
-
-	// $first = $_POST['first'];
-	// $last = $_POST['last'];
-	// $email = $_POST['email'];
-	// $pass = $_POST['password'];
-	// $confirm = $_POST['confirm'];
-	// $sql = "SELECT * FROM `signup` WHERE email ='$email'";
-	// $res = mysqli_query($conn, $sql);
-	// $row = mysqli_fetch_assoc($res);
-	// matched confirm password and password//
-	// if (($pass != $confirm)) {
-	// 	$showAlert1 = true;
-	// }
-	//    checking email already exist or not//
-	// elseif ($email == $row['email']) {
-	// 	$showAlert2 = true;
-	// } else {
-		// insert query//
-		// $sql1 = "INSERT INTO `signup`( `firstname`, `lastname`, `email`, `password`) VALUES ('$first','$last','$email','$pass') ";
-		// $res1 = mysqli_query($conn, $sql1);
-		// $_SESSION['email'] = $_POST['email'];
-		// if ($res1) {
-
-
-// 			$showAlert = true;
-// 		}
-// 	}
-// }
-// if ($showAlert) {
-// 	echo '<div class="alert alert-success" role="alert" >
-// 		success
-// 		</div>';
-// }
-// if ($showAlert1) {
-// 	echo '<div class="alert alert-danger" role="alert" >
-// 		Password not  matched </div>';
-// }
-// if ($showAlert2) {
-// 	echo '<div class="alert alert-danger" role="alert" >
-// 		User is already exists
-// 		</div>';
-// }
-
-
 // <!-- ------------------------------------------------------------------------------------------------- -->
-
-//<!-- login in -->
-
-// if (isset($_POST['submit'])) {
-// 	$email = $_POST['email1'];
-// 	$pass = $_POST['password1'];
-// 	if ($_POST['email1'] != "" && $_POST['password1'] != "") {
-		/*select and check condition*/
-// 		$query = "SELECT * FROM `signup` WHERE email = '$email' and `password`='$pass'";
-
-// 		$result = mysqli_query($con, $query);
-// 		$row = mysqli_fetch_assoc($result);
-// 		if (mysqli_num_rows($result) == 1) {
-// 			$_SESSION['email'] = $_POST['email1'];
-
-// 			header('location:index.php');
-// 		} else {
-// 			echo "<script type='text/javascript'>alert('wrong email and password');</script>";
-// 			header('location:signin.php');
-// 		}
-// 	}
-// }
-
-// <!-- ---------- login----------------- -->
-
-
-
-
-
-
-
 
 
 

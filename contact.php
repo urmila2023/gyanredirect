@@ -1,4 +1,16 @@
 
+<?php
+
+session_start();
+
+//Check if the user is already logged in
+if (!isset($_SESSION['email'])) {
+   
+    // Redirect the user to the home page or any other authorized page
+    // header("Location: sigin_up.php");
+    
+}
+?>
 <!doctype html>
 <html lang="en">
 

@@ -1,4 +1,5 @@
 <?php
+
 include 'action/config.php';
 error_reporting(E_ALL);
 $id = $_GET['id'];

@@ -89,7 +89,7 @@ if (!isset($_SESSION['email'])) {
 			<!-- <i class="fa-solid fa-pencil" id="ed"> -->
 		</div>
 
-		<a href="#" <?php if (isset($_SESSION['email'])) {
+		<a href="./admin/post.php" <?php if (isset($_SESSION['email'])) {
 						echo "style='display:block'";
 					} else {
 						echo "style='display:none'";

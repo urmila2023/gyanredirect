@@ -31,9 +31,9 @@ $id = $_GET['id'];
 <body>
 <?php include 'header.php' ?>
 
-    <div>
+  
         <div class="container-fluid">
-            <div class="row f">
+            <div class="row">
 
                 <div class="col-md-2" style="background-color: #8080804f;">
                 
@@ -45,7 +45,7 @@ $id = $_GET['id'];
                    <?php } ?>
                 </div>
 
-                <div class="col-md-10 mt-3 p-5">
+                <div class="col-md-10 mt-3">
                     <?php
                     if (isset($_GET['cid'])) {
                         $cid = $_GET['cid'];
@@ -56,18 +56,20 @@ $id = $_GET['id'];
                         $res =  mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id GROUP BY id")) ?>
                         <P><?= $res['answer'] ?></P>
                     <?php  } ?>
+                    <?php include 'footer.php' ?>
 
                 </div>
+             
               
 
             </div>
 
         </div>
 
-    </div>
 
 
-    <?php include 'footer.php' ?>
+
+ 
     <!-- ----------------------------- -->
     <script>
         const openSidebar = () => {

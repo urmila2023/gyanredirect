@@ -97,9 +97,7 @@
 
 /* ------------------------signin End */
 /* -------------------- */
-.f{
-  height: 100vh !important;
-}
+
 .footer {
   background-color: #02292C;
 }
@@ -423,6 +421,7 @@
 /* --------------sidebar */
 /* -------------------coursedetails */
 /* ---------------sidebarenrolledcourse---------- */
+
 .designsidebar{
   width: 15% !important;
   background-color: #5C7F83 !important;
@@ -453,11 +452,7 @@
  
 }
 /* about------------ */
-/* .backgr{
-  background-color:#90ee90;
-  height: 753px;
 
-} */
 .backimgs{
   background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/355/020/small_2x/layers-of-abstract-3d-background-overlapping-silver-glitter-with-realistic-dark-brick-wall-free-vector.jpg');
 background-repeat: no-repeat;

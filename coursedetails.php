@@ -26,7 +26,7 @@ $id = $_GET['id'];
    <?php include 'header.php';?>
     <!-- coursesection---------------- -->
 
-    <div class="container" style="margin-top: 10px;">
+    <div class="container" style="margin-top: 90px;">
         <div class="row">
             <div class="col-lg-8">
            <?php $row = mysqli_fetch_array(mysqli_query($con,  "SELECT * FROM `posts` WHERE id= $id")); ?>

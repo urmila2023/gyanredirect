@@ -29,47 +29,74 @@ $id = $_GET['id'];
 </head>
 
 <body>
-<?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
-  
-        <div class="container-fluid">
-            <div class="row">
 
-                <div class="col-md-2" style="background-color: #8080804f;">
-                
-                    <?php
-                    $res = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = '$id' ");
-                    while($data = mysqli_fetch_array($res)){ ?>
+    <div class="container-fluid">
+        <div class="row" style="margin-top: 90px;">
 
-                        <li class="questioncuri"><a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data['id'] ?>" class="ancquestion"> <?= $data['question'] ?> </a></li>
-                   <?php } ?>
-                </div>
+            <div class="col-md-2" style="background-color: #8080804f;">
 
-                <div class="col-md-10 mt-3">
-                    <?php
-                    if (isset($_GET['cid'])) {
-                        $cid = $_GET['cid'];
-                        $res = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `curicullum` WHERE `id` = $cid")); ?>
-                        <P><?= $res['answer'] ?></P>
-                    <?php
-                    } else {
-                        $res =  mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id GROUP BY id")) ?>
-                        <P><?= $res['answer'] ?></P>
-                    <?php  } ?>
-                    <?php include 'footer.php' ?>
+                <?php
+                //$res = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = '$id' ");
+                // while($data = mysqli_fetch_array($res)){ 
+                ?>
 
-                </div>
-             
-              
+                <!-- <li class="questioncuri"><a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data['id'] ?>" class="ancquestion"> <?= $data['question'] ?> </a></li> -->
+                <?php //} 
+                ?>
+
+                <?php
+                $res = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = '$id'");
+                while ($data = mysqli_fetch_array($res)) { ?>
+                    <li class="questioncuri">
+                        <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data['id'] ?>" class="ancquestion">
+                            <?= $data['question'] ?>
+                        </a>
+                    </li>
+
+                <?php }
+
+                // Display quiz after listing all the questions
+                $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `post_id` = '$id'");
+                if (mysqli_num_rows($quizRes) > 0) {
+                    $quizData = mysqli_fetch_array($quizRes);
+                ?>
+                    <li class="quizcuri questioncuri">
+                        <a href="quiz.php?id=<?= $id ?>&quizid=<?= $quizData['post_id'] ?>" class="ancquiz ancquestion text-info">
+                            <?= $quizData['quiz'] ?>
+                        </a>
+                    </li>
+                <?php } ?>
+
 
             </div>
 
+            <div class="col-md-10 mt-3">
+                <?php
+                if (isset($_GET['cid'])) {
+                    $cid = $_GET['cid'];
+                    $res = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `curicullum` WHERE `id` = $cid")); ?>
+                    <P><?= $res['answer'] ?></P>
+                <?php
+                } else {
+                    $res =  mysqli_fetch_array(mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id GROUP BY id")) ?>
+                    <P><?= $res['answer'] ?></P>
+                <?php  } ?>
+                <?php include 'footer.php' ?>
+
+            </div>
+
+
+
         </div>
 
+    </div>
 
 
 
- 
+
+
     <!-- ----------------------------- -->
     <script>
         const openSidebar = () => {

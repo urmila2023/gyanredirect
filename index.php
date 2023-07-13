@@ -32,6 +32,7 @@ if (!isset($_SESSION['email'])) {
 
 <body>
 	<!-- header----------------- -->
+	<?php include 'header.php' ?>
 	<div class="container-fluid bg">
 		<div class="container">
 			<div class="d-flex justify-content-between text-white">
@@ -58,7 +59,7 @@ if (!isset($_SESSION['email'])) {
 		</div>
 
 	</div>
-	<div class="countdiv"><b>03</b></div>
+	<div class="countdiv"><b>01</b></div>
 
 	<div id="mySidebar" class="sidebar">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
@@ -112,7 +113,7 @@ if (!isset($_SESSION['email'])) {
 				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
-			<div class="carousel-inner">
+			<div class="carousel-inner cinner">
 				<div class="carousel-item active">
 					<img src="./assets/imgs/HeroImage (1).png" class="d-block w-100" alt="..." height="400px">
 					<div class="carousel-caption d-none d-md-block text-start">

@@ -32,9 +32,11 @@ if (!isset($_SESSION['email'])) {
 </head>
 <body>
 <?php include 'header.php' ?>
-  <div class="container-fluid backgr mb-5">
-  <div class="container ">
-  <div class="row gx-5">
+  <div class="container-fluid backgr mb-5"   style="margin-top: 150px;">
+  <div class="container">
+  <div class="seaside text-center">All COURSES </div>
+  <p class="text-center m-5 fs-5 mt-3">Welcome to Gyan guru free learning website! We are passionate about providing high-quality educational resources and empowering individuals to expand their knowledge and skills.</p>
+  <div class="row gx-5 rowabout">   
     <div class="col mt-5">
      <div class="p-3 backimgs text-white fs-1 fw-bold text-center">Who We Are
         <P class="text-white bglight fs-5">Welcome to Gyan Guru, your go-to destination for free learning resources! Gyan Guru is a dedicated platform designed to provide high-quality educational materials to 

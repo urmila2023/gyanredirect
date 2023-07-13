@@ -35,7 +35,7 @@ if (!isset($_SESSION['email'])) {
 <body>
 <?php include 'header.php' ?>
 <!-- contactus---------------- -->
-<div class="container-fluid mt-5 mb-5">
+<div class="container-fluid mt-5 mb-5" style="padding-top: 100px;">
 <div class="container  text-center">
   <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
     <div class="col">

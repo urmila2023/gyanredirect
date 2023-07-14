@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2023 at 01:11 PM
+-- Generation Time: Jul 14, 2023 at 07:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -64,8 +64,7 @@ INSERT INTO `category` (`id`, `category`, `status`) VALUES
 (1, 'Finance', 1),
 (2, 'Development', 1),
 (3, 'Investment', 1),
-(4, 'Marketing', 1),
-(6, '', 1);
+(4, 'Marketing', 1);
 
 -- --------------------------------------------------------
 
@@ -123,30 +122,49 @@ INSERT INTO `posts` (`id`, `cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `quiz`
+-- Table structure for table `quiz_options`
 --
 
-CREATE TABLE `quiz` (
-  `id` int(100) NOT NULL,
-  `post_id` int(100) DEFAULT NULL,
-  `quiz` varchar(200) DEFAULT NULL,
-  `questionid` int(100) DEFAULT NULL,
-  `question` varchar(200) DEFAULT NULL,
-  `answerid` int(100) DEFAULT NULL,
-  `answer` varchar(200) DEFAULT NULL,
-  `answerstatus` int(200) DEFAULT NULL,
-  `questinid2` int(100) DEFAULT NULL
+CREATE TABLE `quiz_options` (
+  `option_id` int(11) NOT NULL,
+  `question_id` int(11) NOT NULL,
+  `option_text` varchar(200) DEFAULT NULL,
+  `is_correct` tinyint(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `quiz`
+-- Dumping data for table `quiz_options`
 --
 
-INSERT INTO `quiz` (`id`, `post_id`, `quiz`, `questionid`, `question`, `answerid`, `answer`, `answerstatus`, `questinid2`) VALUES
-(1, 1, 'Quiz 1', 1, 'what is html', 1, 'html', 1, 1),
-(2, 2, 'Quiz 2', 1, 'what is css', 1, 'css', 0, 2),
-(3, NULL, NULL, NULL, NULL, 2, 'dd', 0, 2),
-(4, NULL, NULL, NULL, NULL, 2, 'fdfd', NULL, NULL);
+INSERT INTO `quiz_options` (`option_id`, `question_id`, `option_text`, `is_correct`) VALUES
+(1, 1, 'Hypertext Markup language', 1),
+(2, 1, 'h', 0),
+(3, 1, 't', 0),
+(4, 1, 'm', 0),
+(5, 2, 'Cascading Style Sheet ', 1),
+(6, 2, 'c', 0),
+(7, 2, 's', 0),
+(8, 2, 's', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quiz_questions`
+--
+
+CREATE TABLE `quiz_questions` (
+  `question_id` int(11) NOT NULL,
+  `question_text` varchar(200) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `quiz_questions`
+--
+
+INSERT INTO `quiz_questions` (`question_id`, `question_text`) VALUES
+(1, 'What is HTML?'),
+(2, 'What is CSS?'),
+(3, 'PHP');
 
 -- --------------------------------------------------------
 
@@ -254,10 +272,16 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `quiz`
+-- Indexes for table `quiz_options`
 --
-ALTER TABLE `quiz`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `quiz_options`
+  ADD PRIMARY KEY (`option_id`);
+
+--
+-- Indexes for table `quiz_questions`
+--
+ALTER TABLE `quiz_questions`
+  ADD PRIMARY KEY (`question_id`);
 
 --
 -- Indexes for table `signup`
@@ -300,10 +324,16 @@ ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `quiz`
+-- AUTO_INCREMENT for table `quiz_options`
 --
-ALTER TABLE `quiz`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `quiz_options`
+  MODIFY `option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `quiz_questions`
+--
+ALTER TABLE `quiz_questions`
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `signup`

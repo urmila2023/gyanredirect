@@ -612,6 +612,34 @@ if (!isset($_SESSION['email'])) {
 			document.getElementById("mySlidebar").style.width = "0";
 			document.getElementById("main").style.marginLeft = "0";
 		};
+
+
+
+		let elCarousel = $('.carousel');
+    let elCarouselItem = $('.carousel-item');
+    let elCarouselCounter = $('.crsl_slide-counter');
+
+    elCarousel.each(function () {
+        let $carousel = $(this);
+        let totalItems = $carousel.find(elCarouselItem).length;
+        if (totalItems < 10) {
+            totalItems = '0' + totalItems;
+        }
+        $carousel.find(elCarouselCounter).html('01/' + totalItems + '');
+    });
+
+    elCarousel.on('slid.bs.carousel', function () {
+        let $carousel = $(this);
+        let currentIndex = $carousel.find('div.active').index() + 1;
+        if (currentIndex < 10) {
+            currentIndex = '0' + currentIndex
+        }
+        let ti = $carousel.find(elCarouselItem).length;
+        if (ti < 10) {
+            ti = '0' + ti;
+        }
+        $carousel.find(elCarouselCounter).html('' + currentIndex + '/' + ti + '');
+    });
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

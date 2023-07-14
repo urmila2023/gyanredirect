@@ -1,16 +1,37 @@
 
-
 <?php
+// Assuming you have already established a database connection
+$connection =mysqli_connect("localhost",  "root", "", "eduprix");
+// Retrieve quiz questions and options from the database
+$query = "SELECT qq.question_id, qq.question_text, qo.option_id, qo.option_text
+          FROM quiz_questions AS qq
+          JOIN quiz_options AS qo ON qq.question_id = qo.question_id";
+$result = mysqli_query($connection, $query);
 
-session_start();
+// Store the retrieved questions and options in an associative array
+$questions = array();
+while ($row = mysqli_fetch_assoc($result)) {
+    $questionId = $row['question_id'];
+    $questionText = $row['question_text'];
+    $optionId = $row['option_id'];
+    $optionText = $row['option_text'];
 
-//Check if the user is already logged in
-if (!isset($_SESSION['email'])) {
-   
-    // Redirect the user to the home page or any other authorized page
-    // header("Location: sigin_up.php");
-    
-}?>
+    // Add options to the corresponding question
+    if (!isset($questions[$questionId])) {
+        $questions[$questionId] = array(
+            'question_text' => $questionText,
+            'options' => array()
+        );
+    }
+
+    $questions[$questionId]['options'][] = array(
+        'option_id' => $optionId,
+        'option_text' => $optionText
+    );
+}
+
+
+?>
 <!DOCTYPE html>
 <head>
 	 <!-- Required meta tags -->
@@ -33,149 +54,22 @@ if (!isset($_SESSION['email'])) {
 <body>
 <?php include 'header.php';?>
 	<div id="page-wrap">
- 
-		<h3>Simple Quiz Built On Course</h3>
-		
-		<form action="result.php" method="post" id="quiz" >
-		
-            <ol class="mt-4">
-            
-                <li>
-                
-                    <h5>WordPress is a...</h5>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-                        <label for="question-1-answers-A">(A) Software </label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-                        <label for="question-1-answers-B">(B) Web App</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-                        <label for="question-1-answers-C">(C) CMS</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-                        <label for="question-1-answers-D">(D) Other</label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h5>SEO is Part Of...</h5>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
-                        <label for="question-2-answers-A">(A) Video Editing</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
-                        <label for="question-2-answers-B">(B) Graphic Designing</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
-                        <label for="question-2-answers-C">(C) Web Designing</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
-                        <label for="question-2-answers-D">(D) Digital Marketing</label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h5>PHP is a....</h5>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
-                        <label for="question-3-answers-A">(A) Server Side Script</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
-                        <label for="question-3-answers-B">(B) Programming Language</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
-                        <label for="question-3-answers-C">(C) Markup Language</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
-                        <label for="question-3-answers-D">(D) None Of Above These</label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h5>Localhost IP is..</h5>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
-                        <label for="question-4-answers-A">(A) 192.168.0.1</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
-                        <label for="question-4-answers-B">(B) 127.0.0.0</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
-                        <label for="question-4-answers-C">(C) 1080:80</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
-                        <label for="question-4-answers-D">(D) Any Other</label>
-                    </div>
-                
-                </li>
-                
-                <li>
-                
-                    <h5>Webdevtrick Is For</h5>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
-                        <label for="question-5-answers-A">(A) Web Designer</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
-                        <label for="question-5-answers-B">(B) Web Developer</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
-                        <label for="question-5-answers-C">(C) Graphic Designer</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
-                        <label for="question-5-answers-D">(D) All Above These</label>
-                    </div>
-                
-                </li>
-            
-            </ol>
-            <input type="submit" value="Submit" class="submitbtn btngetcourse mb-4 mt-2" />
-		
-		</form>
-	
-	</div>
+        <form action="result.php" method="post">
+        <?php foreach ($questions as $questionId => $question): ?>
+            <h4>Question <?php echo $questionId; ?>:</h4>
+            <h6><?php echo $question['question_text']; ?></h6>
+
+            <?php foreach ($question['options'] as $option): ?>
+                <input type="radio" name="question_<?php echo $questionId; ?>" value="<?php echo $option['option_id']; ?>">
+                <?php echo $option['option_text']; ?><br>
+            <?php endforeach; ?>
+
+            <br>
+        <?php endforeach; ?>
+
+        <input type="submit" class="btngetcourse mb-4" value="Submit">
+    </form>
+    </div>
     <?php include 'footer.php' ?>
 
     <script>const openSidebar = () => {
@@ -199,3 +93,5 @@ if (!isset($_SESSION['email'])) {
 </body>
  
 </html>
+
+

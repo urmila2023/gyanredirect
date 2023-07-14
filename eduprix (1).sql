@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2023 at 07:56 AM
+-- Generation Time: Jul 14, 2023 at 10:30 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -118,6 +118,26 @@ INSERT INTO `posts` (`id`, `cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, 
 (2, 2, 'Introduce to Finance', 'Begginner', 'Financial Decisions,Financial Analysis,Investments,Budgeting,Risk Management,Personal Finance', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.', 'commercial.jpg', NULL),
 (3, 3, 'Importance Of Investment', 'Advanced', 'fedwfde', '<p>fswfswfswwwwwwerererer</p>', 'commercial.jpg', '07 Jul 2023'),
 (4, 4, 'Importance of Marketing', 'Biggner', 'Stock Market,Diversification,Return on Investment (ROI),Asset Allocation,Portfolio Management,Invest', '<h3>Introduce to HTML</h3><p>&nbsp;</p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It provides a set of tags and attributes that define the structure and presentation of a web document. HTML uses a hierarchical structure, where elements are nested within one another to form a logical and organized layout.</span></p><p><br><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">HTML (Hypertext Markup Language) has several key features that make it a powerful language for creating web pages. Here are some of the notable features of HTML:</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.Structure and Semantics</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">2.Tags and Attributes</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">3.Hyperlinks</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">4.Multimedia Support</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">5.Forms and Input</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">6.Accessibility</span></p>', 'commercial.jpg', '07 Jul 2023');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quiz`
+--
+
+CREATE TABLE `quiz` (
+  `id` int(11) NOT NULL,
+  `quizid` int(11) NOT NULL,
+  `quiz` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `quiz`
+--
+
+INSERT INTO `quiz` (`id`, `quizid`, `quiz`) VALUES
+(1, 1, 'Quiz 1'),
+(2, 2, 'quiz 2');
 
 -- --------------------------------------------------------
 
@@ -272,6 +292,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `quiz`
+--
+ALTER TABLE `quiz`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `quiz_options`
 --
 ALTER TABLE `quiz_options`
@@ -322,6 +348,12 @@ ALTER TABLE `curicullum`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `quiz`
+--
+ALTER TABLE `quiz`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `quiz_options`

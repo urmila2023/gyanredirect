@@ -58,12 +58,12 @@ $id = $_GET['id'];
                 <?php }
 
                 // Display quiz after listing all the questions
-                $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `post_id` = '$id'");
+                $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `quizid` = '$id'");
                 if (mysqli_num_rows($quizRes) > 0) {
                     $quizData = mysqli_fetch_array($quizRes);
                 ?>
                     <li class="quizcuri questioncuri">
-                        <a href="quiz.php?id=<?= $id ?>&quizid=<?= $quizData['post_id'] ?>" class="ancquiz ancquestion text-info">
+                        <a href="quiz.php?id=<?= $id ?>&quizid=<?= $quizData['quizid'] ?>" class="ancquiz ancquestion text-info">
                             <?= $quizData['quiz'] ?>
                         </a>
                     </li>

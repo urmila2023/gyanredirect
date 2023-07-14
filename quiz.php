@@ -6,6 +6,7 @@ $connection =mysqli_connect("localhost",  "root", "", "eduprix");
 $query = "SELECT qq.question_id, qq.question_text, qo.option_id, qo.option_text
           FROM quiz_questions AS qq
           JOIN quiz_options AS qo ON qq.question_id = qo.question_id";
+          
 $result = mysqli_query($connection, $query);
 
 // Store the retrieved questions and options in an associative array
@@ -32,6 +33,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
 ?>
+
+
 <!DOCTYPE html>
 <head>
 	 <!-- Required meta tags -->
@@ -67,7 +70,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <br>
         <?php endforeach; ?>
 
-        <input type="submit" class="btngetcourse mb-4" value="Submit">
+        <input type="submit" class="btngetcourse mb-4" name ="submit" value="Submit">
     </form>
     </div>
     <?php include 'footer.php' ?>

@@ -38,17 +38,20 @@ $id = $_GET['id'];
 
             <div class="col-md-2" style="background-color: #8080804f;">
 
-                <?php
-                $res = mysqli_query($con, "SELECT * FROM `curicullum_title` WHERE `post_id` = '$id'");
-                if (mysqli_num_rows($res) > 0) {
 
-                    while ($data = mysqli_fetch_array($res)) { ?>
+
+<!-- ///////////////////////////old code -->
+                <!-- <?php
+                        $res = mysqli_query($con, "SELECT * FROM `curicullum_title` WHERE `post_id` = '$id'");
+                        if (mysqli_num_rows($res) > 0) {
+
+                            while ($data = mysqli_fetch_array($res)) { ?>
                         <li class="questioncuri">
                             <?= $data['title'] ?>
                         </li>
                         <?php
-                        $cur1 = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `curi_id` = $data[id]  ");
-                        while ($data2 = mysqli_fetch_array($cur1)) { ?>
+                                $cur1 = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `curi_id` = $data[id]  ");
+                                while ($data2 = mysqli_fetch_array($cur1)) { ?>
                             <div>
                                 <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
                                     <p class="curi"><?= $data2['question']; ?></p>
@@ -56,21 +59,67 @@ $id = $_GET['id'];
                             </div>
 
                     <?php }
-                    }
-                }
+                            }
+                        }
 
 
-                // Display quiz after listing all the questions
-                $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `quizid` = '$id'");
-                if (mysqli_num_rows($quizRes) > 0) {
-                    $quizData = mysqli_fetch_array($quizRes);
+                        // Display quiz after listing all the questions
+                        $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `quizid` = '$id'");
+                        if (mysqli_num_rows($quizRes) > 0) {
+                            $quizData = mysqli_fetch_array($quizRes);
                     ?>
                     <li class="quizcuri questioncuri">
                         <a href="quiz.php?id=<?= $id ?>&quizid=<?= $quizData['quizid'] ?>" class="ancquiz ancquestion text-info">
                             <?= $quizData['quiz'] ?>
                         </a>
                     </li>
-                <?php } ?>
+                <?php } ?> -->
+
+<!-- ////////////////////old code -->
+
+
+
+
+
+
+
+
+                <?php
+                $shownQuizzes = array();
+
+                $res = mysqli_query($con, "SELECT * FROM `curicullum_title` WHERE `post_id` = '$id'");
+                if (mysqli_num_rows($res) > 0) {
+                    while ($data = mysqli_fetch_array($res)) {
+                ?>
+                        <li class="questioncuri">
+                            <?= $data['title'] ?>
+                        </li>
+                        <?php
+                        $cur1 = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `curi_id` = $data[id]");
+                        while ($data2 = mysqli_fetch_array($cur1)) {
+                        ?>
+                            <div>
+                                <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
+                                    <p class="curi"><?= $data2['question']; ?></p>
+                                </a>
+                            </div>
+                        <?php
+                        } 
+                        $quizRes = mysqli_query($con, "SELECT * FROM `quiz` WHERE `quizid` = '$id' AND `quizid` NOT IN ('" . implode("','", $shownQuizzes) . "')");
+                        if (mysqli_num_rows($quizRes) > 0) {
+                            $quizData = mysqli_fetch_array($quizRes);
+                            $shownQuizzes[] = $quizData['quizid'];
+                        ?>
+                            <li class="quizcuri questioncuri">
+                                <a href="quiz.php?id=<?= $id ?>&quizid=<?= $quizData['quizid'] ?>" class="ancquiz ancquestion text-info">
+                                    <?= $quizData['quiz'] ?>
+                                </a>
+                            </li>
+                <?php
+                        }
+                    }
+                }
+                ?>
 
             </div>
 

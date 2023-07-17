@@ -50,31 +50,37 @@ include '../action/config.php';
 								<table class="table table-bordered" id="myTable">
 									<thead>
 										<th>S.no</th>
-										<th>Post Date</th>
-										<th>Last Date</th>
 										<th>Title</th>
-										<th>Category</th>
-										<th>Short Info</th>
+										<th>Catagary</th>
+										<th>Lebal</th>
+										<th>Tags</th>
+										<th>post_date</th>
+										<th>image</th>
 										<th>Action</th>
+
 									</thead>
 									<?php
-									$i=1;
-									$qry = mysqli_query($con, "SELECT * FROM `posts` WHERE status=1 ORDER BY id DESC ");
+									$i = 1;
+									$qry = mysqli_query($con, "SELECT * FROM `posts` ORDER BY id DESC ");
 									while ($res = mysqli_fetch_array($qry)) :
 									?>
 										<tr>
 											<td><?= $i++ ?>.</td>
-											<td><?= date('d-m-Y',strtotime($res['post_date'])) ?></td>
-											<td><?= date('d-m-Y',strtotime($res['last_date'])) ?></td>
-											<td style="line-height: 20px;"><?= wordwrap($res['job_title'], 30, "<br>\n") ?></td>
+
+											<td style="line-height: 20px;"><?= ($res['title']) ?></td>
+
+
 											<td>
 												<?php
 												$z = mysqli_fetch_array(mysqli_query($con, "SELECT category FROM `category` WHERE id='$res[cat_id]' "));
 												echo $z['category'];
 												?>
 											</td>
-											<td style="line-height: 20px;"><?= wordwrap($res['short_info'], 30, "<br>\n") ?></td>
-											
+											<td style="line-height: 20px;"><?= ($res['lebal']) ?></td>
+											<td style="line-height: 20px;"><?= ($res['tags']) ?></td>
+											<td><?= date('d-m-Y', strtotime($res['post_date'])) ?></td>
+											<td style="line-height: 20px;"><img src="<?= $path . $res['image'] ?>" /></td>
+
 											<td>
 												<a href="post-edit?post_id=<?= $res['id'] ?>" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
 												<br><br>

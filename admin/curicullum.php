@@ -39,50 +39,108 @@ include '../action/config.php';
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<div class="card">
-						<div class="card-body">
-							<h5>Add <?= $page ?></h5>
-							<form method="post" enctype="multipart/form-data" runat="server">
-								<div class="row">
 
-									<div class="col-md-4 my-2">
-										<label>Course Detail</label>
+					<div class="row">
+						<div class="col-md-6">
 
-										<select name="post_id" class="js-example-basic-multiple form-control form-control-sm">
-											<option value=""> -- SELECT --</option>
-											<?php
-											$qry = mysqli_query($con, "SELECT * FROM `posts` ");
-											while ($res = mysqli_fetch_array($qry)) : ?>
-												<option value="<?= $res['id'] ?>"><?= $res['title'] ?></option>
-											<?php endwhile; ?>
-										</select>
+							<div class="card">
+								<div class="card-body">
+									<h5>Add <?= $page ?> Title</h5>
+									<form method="post" enctype="multipart/form-data" runat="server">
+										<div class="col-md-12 my-2">
+											<label>Course Detail</label>
 
-									</div>
+											<select name="post_id" class="js-example-basic-multiple form-control form-control-sm">
+												<option value=""> -- SELECT --</option>
+												<?php
+												$qry = mysqli_query($con, "SELECT * FROM `posts` ");
+												while ($res = mysqli_fetch_array($qry)) : ?>
+													<option value="<?= $res['id'] ?>"><?= $res['title'] ?></option>
+												<?php endwhile; ?>
+											</select>
 
-
-									<div class="col-md-4 my-2">
-										<label>Quastion </label>
-										<input name="qus" placeholder="Type Question !" class="form-control form-control-sm " type="text" required>
-									</div>
-
-									<div class="col-md-4 my-2">
-										<label>Answer </label>
-										<input name="ans" placeholder="Type Answer !" class="form-control form-control-sm " type="text" required>
-									</div>
-
-
-									<div class="col-md-12" style="margin-top:28px;">
-										<div class="text-center col-md-2" style="margin-top:28px;">
-											<button type="submit" name="add_curicullum" class="btn btn-primary btn-block">Save</button>
 										</div>
-									</div>
+
+
+										<div class="col-md-12 my-2">
+											<label>Title </label>
+											<input name="title" placeholder="Type Curicullum Title !" class="form-control form-control-sm " type="text" required>
+										</div>
+
+
+
+
+										<div class="col-md-12" style="margin-top:28px;">
+											<div class="text-center col-md-6" style="margin-top:28px;">
+												<button type="submit" name="add_curicullum_title" class="btn btn-primary btn-block">Save</button>
+											</div>
+										</div>
+
+									</form>
 								</div>
-							</form>
+							</div>
+
+
 						</div>
+
+
+						<div class="col-md-6">
+
+
+							<div class="card">
+								<div class="card-body">
+									<h5>Add <?= $page ?></h5>
+									<form method="post" enctype="multipart/form-data" runat="server">
+										<div class="row">											
+
+											<div class="col-md-12 my-2">
+												<label>Select Curicullum Title</label>
+
+												<select name="curi_id" class="js-example-basic-multiple form-control form-control-sm">
+													<option value=""> -- SELECT --</option>
+													<?php
+													$qry = mysqli_query($con, "SELECT * FROM `curicullum_title` ");
+													while ($res = mysqli_fetch_array($qry)) : ?>
+														<option value="<?= $res['id'] ?>"><?= $res['title'] ?></option>
+													<?php endwhile; ?>
+												</select>
+
+											</div>
+
+
+											<div class="col-md-12 my-2">
+												<label>Quastion </label>
+												<input name="qus" placeholder="Type Question !" class="form-control form-control-sm " type="text" required>
+											</div>
+
+											<div class="col-md-12 my-2">
+												<label>Answer </label>
+												<input name="ans" placeholder="Type Answer !" class="form-control form-control-sm " type="text" required>
+											</div>
+
+
+											<div class="col-md-12" style="margin-top:28px;">
+												<div class="text-center col-md-6" style="margin-top:28px;">
+													<button type="submit" name="add_curicullum" class="btn btn-primary btn-block">Save</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+
+
+
+
+						</div>
+
+
 					</div>
 
 
 
+
+					<!-- 
 					<div class="card">
 						<div class="card-header">
 							<h2><?= $page ?> List</h2>
@@ -94,7 +152,7 @@ include '../action/config.php';
 										<th>S.no</th>
 										<th class="text-left">Question</th>
 										<th>Answer</th>
-										
+
 									</thead>
 									<tbody>
 										<?php
@@ -123,6 +181,13 @@ include '../action/config.php';
 							</div>
 						</div>
 					</div>
+				
+				
+				 -->
+
+
+
+
 				</div>
 			</div>
 		</div>

@@ -33,6 +33,8 @@ if (!isset($_SESSION['email'])) {
 <body>
 	<!-- header----------------- -->
 	<?php include 'header.php' ?>
+
+
 	<div class="container-fluid bg">
 		<div class="container">
 			<div class="d-flex justify-content-between text-white">
@@ -61,49 +63,6 @@ if (!isset($_SESSION['email'])) {
 	</div>
 	<div class="countdiv"><b>01</b></div>
 
-	<div id="mySidebar" class="sidebar">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-		<a href="about.php" class="fs-5">About</a>
-		<a href="allcourses.php" class="fs-5">Courses</a>
-		<a href="contact.php" class="fs-5">Contact</a>
-	</div>
-	<!-- user icon section -->
-	<div id="mySlidebar" class="sidebar">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
-		<a href="signin.php" <?php if (!isset($_SESSION['email'])) {
-									echo "style='display:block'";
-								} else {
-									echo "style='display:none'";
-								} ?>class="fs-5">Sign In/sign up</a>
-
-		<div <?php if (isset($_SESSION['email'])) {
-					echo "style='display:block'";
-				} else {
-					echo "style='display:none'";
-				} ?> class="userpic">
-			<img src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg" width="40%" height="30%" class="rounded-circle mx-5">
-
-			<img src="./assets/imgs/camera.png
-         
-         " class=" cmr rounded-circle mx-5" width="12%"><span></span>
-
-			<!-- <i class="fa-solid fa-pencil" id="ed"> -->
-		</div>
-
-		<a href="./admin/post.php" <?php if (isset($_SESSION['email'])) {
-						echo "style='display:block'";
-					} else {
-						echo "style='display:none'";
-					} ?>class="fs-5">Dashboard</a>
-		<a href="logout1.php" <?php if (isset($_SESSION['email'])) {
-									echo "style='display:block'";
-								} else {
-									echo "style='display:none'";
-								} ?>class="fs-5">Logout</a>
-
-	</div>
-
-	<!-- header------------------- -->
 	<!-- ---------------------------------- -->
 
 	<div class="container mt-4">
@@ -399,7 +358,7 @@ if (!isset($_SESSION['email'])) {
 			</div>
 			<div class="col">
 				<div class="m-5 text-center">
-					<div><img src="./assets/imgs/Illustration2.png"/></div>
+					<div><img src="./assets/imgs/Illustration2.png" /></div>
 					<h3 class="mathunknown">99981</h3>
 					<h4 class="unknownh4">Happy <br> Learners</h4>
 					<p class="fs-40">Learners from all around <br>the world.</p>
@@ -616,30 +575,30 @@ if (!isset($_SESSION['email'])) {
 
 
 		let elCarousel = $('.carousel');
-    let elCarouselItem = $('.carousel-item');
-    let elCarouselCounter = $('.crsl_slide-counter');
+		let elCarouselItem = $('.carousel-item');
+		let elCarouselCounter = $('.crsl_slide-counter');
 
-    elCarousel.each(function () {
-        let $carousel = $(this);
-        let totalItems = $carousel.find(elCarouselItem).length;
-        if (totalItems < 10) {
-            totalItems = '0' + totalItems;
-        }
-        $carousel.find(elCarouselCounter).html('01/' + totalItems + '');
-    });
+		elCarousel.each(function() {
+			let $carousel = $(this);
+			let totalItems = $carousel.find(elCarouselItem).length;
+			if (totalItems < 10) {
+				totalItems = '0' + totalItems;
+			}
+			$carousel.find(elCarouselCounter).html('01/' + totalItems + '');
+		});
 
-    elCarousel.on('slid.bs.carousel', function () {
-        let $carousel = $(this);
-        let currentIndex = $carousel.find('div.active').index() + 1;
-        if (currentIndex < 10) {
-            currentIndex = '0' + currentIndex
-        }
-        let ti = $carousel.find(elCarouselItem).length;
-        if (ti < 10) {
-            ti = '0' + ti;
-        }
-        $carousel.find(elCarouselCounter).html('' + currentIndex + '/' + ti + '');
-    });
+		elCarousel.on('slid.bs.carousel', function() {
+			let $carousel = $(this);
+			let currentIndex = $carousel.find('div.active').index() + 1;
+			if (currentIndex < 10) {
+				currentIndex = '0' + currentIndex
+			}
+			let ti = $carousel.find(elCarouselItem).length;
+			if (ti < 10) {
+				ti = '0' + ti;
+			}
+			$carousel.find(elCarouselCounter).html('' + currentIndex + '/' + ti + '');
+		});
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

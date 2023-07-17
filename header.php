@@ -31,35 +31,34 @@
     <!-- user icon section -->
     <div id="mySlidebar" class="sidebar">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
-		<a href="signin.php" <?php if (!isset($_SESSION['email'])) {
+		<a href="admin/" <?php if (!isset($_SESSION['email'])) {
 									echo "style='display:block'";
 								} else {
 									echo "style='display:none'";
 								} ?>class="fs-5">Sign In/sign up</a>
 
 		<div <?php if (isset($_SESSION['email'])) {
-					echo "style='display:block'";
+					echo "style='display:block; text-align:center;'";
 				} else {
 					echo "style='display:none'";
 				} ?> class="userpic">
-			<img src="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg" width="40%" height="30%" class="rounded-circle mx-5">
+			<img src="<?= $_SESSION['image'] ?>" width="30%" height="25%" class="rounded-circle text-center"><br>
+            <p class="text-center text-warning"><?= $_SESSION['email'] ?></p>
 
-			<img src="./assets/imgs/camera.png
-         
-         " class=" cmr rounded-circle mx-5" width="12%"><span></span>
 
 			<!-- <i class="fa-solid fa-pencil" id="ed"> -->
 		</div>
+        <hr class="text-white">
 
-		<a href="./admin/post.php" <?php if (isset($_SESSION['email'])) {
-						echo "style='display:block'";
+		<a  class="text-info" href="./admin/dashboard.php" <?php if (isset($_SESSION['email'])) {
+						echo "style='display:block; text-align:center; '";
 					} else {
-						echo "style='display:none'";
+						echo "style='display:none; text-align:center;'";
 					} ?>class="fs-5">Dashboard</a>
-		<a href="logout1.php" <?php if (isset($_SESSION['email'])) {
-									echo "style='display:block'";
+		<a class="text-info" href="logout1.php" <?php if (isset($_SESSION['email'])) {
+									echo "style='display:block ; text-align:center;'";
 								} else {
-									echo "style='display:none'";
+									echo "style='display:none ; text-align:center;'";
 								} ?>class="fs-5">Logout</a>
 
 	</div>

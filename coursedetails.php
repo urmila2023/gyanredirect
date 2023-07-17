@@ -23,13 +23,13 @@ $id = $_GET['id'];
 </head>
 
 <body>
-   <?php include 'header.php';?>
+    <?php include 'header.php'; ?>
     <!-- coursesection---------------- -->
 
     <div class="container" style="margin-top: 90px;">
         <div class="row">
             <div class="col-lg-8">
-           <?php $row = mysqli_fetch_array(mysqli_query($con,  "SELECT * FROM `posts` WHERE id= $id")); ?>
+                <?php $row = mysqli_fetch_array(mysqli_query($con,  "SELECT * FROM `posts` WHERE id= $id")); ?>
                 <h1 class="coursetitleh1 mt-5"><?php echo $row['title'] ?></h1>
                 <p class="mt-5">Teacher : <b>U.M.</b></p>
                 <!-- Nav tabs -->
@@ -75,23 +75,25 @@ $id = $_GET['id'];
                         </div>
                     </div>
 
-                    <div class="tab-pane container fade" id="pro">
+                    <div class="tab-pane container fade" id="pro"> <?php
+
+                        $cur = mysqli_query($con, "SELECT * FROM `curicullum_title` WHERE `post_id` = $id  ");
 
 
-                     <?php
-                       
-                       $cur = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `post_id` = $id ");?>
-                       <h5 class="mt-5">INTRODUCTION</h5><?php
-                        while ($data2 = mysqli_fetch_array($cur)) { ?>
-                        
-
-                            <div>
-                                <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
-                                   <p class="curi"><?= $data2['question']; ?></p>
-                                </a>
-                            </div>
-                        <?php  
-                    } ?> 
+                        if (mysqli_num_rows($cur) > 0) {
+                            while ($data1 = mysqli_fetch_array($cur)) { ?>
+                                <h5 class="mt-5"><?= $data1['title']; ?></h5>
+                                <?php
+                                $cur1 = mysqli_query($con, "SELECT * FROM `curicullum` WHERE `curi_id` = $data1[id]  ");
+                                while ($data2 = mysqli_fetch_array($cur1)) { ?>
+                                    <div>
+                                        <a href="enrolledcourse.php?id=<?= $id ?>&cid=<?= $data2['id'] ?>" class="ancquestion">
+                                            <p class="curi"><?= $data2['question']; ?></p>
+                                        </a>
+                                    </div>
+                        <?php }
+                            }
+                        } ?>
 
                     </div>
 

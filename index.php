@@ -150,7 +150,7 @@ if (!isset($_SESSION['email'])) {
 			?>
 					<div class="col">
 						<div class="card cardborder">
-							<img src="<?php echo 'assets/imgs/' . $row['image']; ?>" class="card-img-top" alt="...">
+							<img src="<?php echo 'assets/imgs/' . $row['image']; ?>" class="card-img-top" alt="..." style="height:280px;">
 							<div class="card-body">
 								<a href="coursedetails.php?id=<?php echo $row['id']; ?>">
 									<button type="button" class="btn btn-primary position-relative bgi">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2023 at 12:17 PM
+-- Generation Time: Jul 18, 2023 at 08:45 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -90,7 +90,16 @@ INSERT INTO `curicullum` (`id`, `curi_id`, `question`, `answer`) VALUES
 (1, 1, 'What is HTML ?', 'HTML is Stand for HYPER TEXT MARKUP LANGUAGE'),
 (2, 1, 'What is HTML TAG?', 'HTML Tag is Use for Web Design !'),
 (3, 2, 'Design A Web Page Using HTML ?', 'Design Complete in WEb Pageb!'),
-(4, 3, 'What is Finance ?', 'Finance is Finance !');
+(4, 3, 'What is Finance ?', 'Finance is Finance !'),
+(5, 4, 'HTML Basic', 'This is html basic.'),
+(6, 5, 'HTML Editor', 'This is html editor.'),
+(7, 6, 'Finance Basic.', 'This is Finance Basic.'),
+(8, 7, 'Finance Introduction', 'This is finance introduction'),
+(9, 8, 'CSS Basic', 'This is CSS basic.'),
+(10, 8, 'CSS Flexbox.', 'This is css flexbox.'),
+(11, 10, 'PHP Function?', 'This is php function.'),
+(12, 11, 'Php array', 'This is php array'),
+(14, 9, 'CSS background', 'This is css background.');
 
 -- --------------------------------------------------------
 
@@ -109,9 +118,14 @@ CREATE TABLE `curicullum_title` (
 --
 
 INSERT INTO `curicullum_title` (`id`, `post_id`, `title`) VALUES
-(1, 1, 'Introduction'),
-(2, 1, 'First Day'),
-(3, 2, 'Finace First Day');
+(4, 1, 'HTML FIRST DAY '),
+(5, 1, 'HTML SECOUND DAY'),
+(6, 2, 'FINANCE FIRST DAY'),
+(7, 2, 'FINANCE SECOUND DAY'),
+(8, 3, 'CSS FIRST DAY'),
+(9, 3, 'CSS SECOUND DAY'),
+(10, 4, 'PHP FIRST DAY'),
+(11, 4, 'PHP SECOUND DAY');
 
 -- --------------------------------------------------------
 
@@ -136,11 +150,9 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `cat_id`, `title`, `lebal`, `tags`, `desc`, `image`, `post_date`) VALUES
 (1, 1, 'HTML', 'Biggner', 'Table,Span, Division,List Item, Ordered List, Unordered List, Image,Anchor,Paragraph,Heading', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.<p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It pp><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.', 'commercial.jpg', '07 Jul 2023'),
-(2, 2, 'Introduce to Finance', 'Begginner', 'Financial Decisions,Financial Analysis,Investments,Budgeting,Risk Management,Personal Finance', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.', 'commercial.jpg', NULL),
-(3, 3, 'Importance Of Investment', 'Advanced', 'fedwfde', '<p>fswfswfswwwwwwerererer</p>', 'commercial.jpg', '07 Jul 2023'),
-(4, 4, 'Importance of Marketing', 'Biggner', 'Stock Market,Diversification,Return on Investment (ROI),Asset Allocation,Portfolio Management,Invest', '<h3>Introduce to HTML</h3><p>&nbsp;</p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It provides a set of tags and attributes that define the structure and presentation of a web document. HTML uses a hierarchical structure, where elements are nested within one another to form a logical and organized layout.</span></p><p><br><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">HTML (Hypertext Markup Language) has several key features that make it a powerful language for creating web pages. Here are some of the notable features of HTML:</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.Structure and Semantics</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">2.Tags and Attributes</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">3.Hyperlinks</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">4.Multimedia Support</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">5.Forms and Input</span></p><p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">6.Accessibility</span></p>', 'commercial.jpg', '07 Jul 2023'),
-(5, 3, 'wmhtitile', 'Biggner', 'hgj,h,jhk,jhk,', '<h4><strong>wmh</strong></h4><p>vvvvvvvvvvvvvvvvjhhhhhhhhhggggggggggggggggggggg</p>', 'wmh.png', '15 Jul 2023'),
-(6, 3, 'wmhtitile', 'Biggner', 'hgj,h,jhk,jhk,', '<p>jhkjkl</p>', 'wmh.png', '15 Jul 2023');
+(2, 2, 'Finance', 'Begginner', 'Financial Decisions,Financial Analysis,Investments,Budgeting,Risk Management,Personal Finance', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.<p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It pp><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.', 'commercial.jpg', NULL),
+(3, 3, 'CSS', 'Advanced', 'fedwfde', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.<p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It pp><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.', 'commercial.jpg', '07 Jul 2023'),
+(4, 4, 'PHP', 'Biggner', 'Stock Market,Diversification,Return on Investment (ROI),Asset Allocation,Portfolio Management,Invest', '\nFinance is a field that deals with the management of money, investments, and other financial assets. It encompasses a wide range of activities, including banking, investing, budgeting, saving, and lending. Finance plays a crucial role in individuals\' lives, businesses of all sizes, and the overall economy.<p><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\"><strong>HTML</strong> (Hypertext Markup Language) is the standard markup language used for creating web pages and structuring their content. It pp><span style=\"background-color:rgb(247,247,248);color:rgb(55,65,81);\">1.', 'commercial.jpg', '07 Jul 2023');
 
 -- --------------------------------------------------------
 
@@ -160,7 +172,10 @@ CREATE TABLE `quiz` (
 
 INSERT INTO `quiz` (`id`, `quizid`, `quiz`) VALUES
 (1, 1, 'Quiz 1'),
-(2, 2, 'quiz 2');
+(2, 2, 'quiz 2'),
+(3, 3, 'Quiz3'),
+(4, 4, 'Quiz4'),
+(5, 2, 'Quiz2');
 
 -- --------------------------------------------------------
 
@@ -370,13 +385,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `curicullum`
 --
 ALTER TABLE `curicullum`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `curicullum_title`
 --
 ALTER TABLE `curicullum_title`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -388,7 +403,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `quiz_options`
